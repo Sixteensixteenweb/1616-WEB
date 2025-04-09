@@ -1,0 +1,298 @@
+:root {
+	--primary-font: 'Arial', sans-serif;
+	--secondary-font: 'Times', serif;
+	--text-color: #2f2929;
+	--primary-color: rgb(0, 38, 255);
+	--secondary-color: #834a00;
+	--grey: rgb(177, 177, 177);
+	color: var(--text-color);
+	font-family: var(--primary-font);
+	cursor: default;
+	font-size: 16px;
+	letter-spacing: 0.0025em;
+	-webkit-animation: var(--fade-in-effect);
+	-moz-animation: var(--fade-in-effect);
+	-ms-animation: var(--fade-in-effect);
+	-o-animation: var(--fade-in-effect);
+	animation: var(--fade-in-effect);
+}
+
+::selection {
+	background: var(--text-color);
+	color: #fff;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	line-height: 1.2em;
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+ul {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+/* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
+
+header,
+nav,
+main,
+footer {
+	width: 50%;
+	min-width: 800px;
+	margin: 0 auto;
+}
+
+header,
+footer {
+	text-align: center;
+	font-family: var(--secondary-font);
+}
+
+header h3 {
+	margin-bottom: 0.5rem;
+}
+
+header p {
+	margin: 0.25em 0 0 0;
+	font-size: 12px;
+}
+
+.header__container {
+	margin: 1rem 0;
+}
+
+.header__container img {
+	min-width: 20%;
+	height: 60px;
+	width: auto;
+}
+
+footer {
+	display: none;
+	border-top: 1px solid var(--secondary-color);
+	margin: 4rem 0 2rem 0;
+}
+
+/* STYLING FOR DROP DOWN NAVIGATION MENU */
+.nav-dropdown {
+	position: sticky;
+	top: 12px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	border-radius: 0;
+	background: white;
+	cursor: pointer;
+	display: grid;
+	align-items: center;
+	grid-template-areas: 'select';
+}
+
+.nav-dropdown::after {
+	content: '';
+	width: 0.8em;
+	height: 0.5em;
+	background-color: var(--text-color);
+	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+	grid-area: select;
+	justify-self: end;
+	margin-right: 0.5rem;
+}
+
+.nav-dropdown select {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	appearance: none;
+	outline: none;
+	border: none;
+	border-radius: 0;
+	background: transparent;
+	cursor: inherit;
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	grid-area: select;
+}
+
+.nav-dropdown select::-ms-expand {
+	display: none;
+}
+
+.nav-dropdown option {
+	text-transform: uppercase;
+}
+
+/* STYLING FOR PAGE*/
+
+.page-section {
+	display: none;
+	text-align: center;
+}
+
+.exhibition,
+.archive,
+.printed,
+.artists {
+	display: block;
+}
+
+.tab--item {
+	color: var(--grey);
+	background: white;
+	font-weight: normal;
+	text-transform: uppercase;
+	border: none;
+}
+
+.active,
+.active:hover,
+h5 {
+	color: var(--primary-color);
+}
+
+.active::before {
+	content: '(';
+	color: var(--primary-color);
+}
+
+.active::after {
+	content: ')';
+	color: var(--primary-color);
+}
+
+h2,
+h5 {
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h5,
+.tab--item {
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+.exhibition__container,
+.archive__container,
+.printed__container,
+.artists__container {
+	text-decoration: none;
+}
+
+.exhibition--details h2 {
+	color: var(--text-color);
+}
+
+.exhibition--details h2:nth-child(2) {
+	font-style: italic;
+}
+
+.exhibition--details h2:nth-child(3) {
+	color: var(--grey);
+}
+
+.exhibition--details h2,
+.printed--item,
+.artists__container a {
+	font-family: var(--secondary-font);
+}
+
+.exhibition--details,
+.printed--item,
+.artists__container a {
+	text-decoration: none;
+}
+
+.exhibition--details .exhibition--img img {
+	width: 100%;
+}
+
+.archive__container,
+.exhibition__container,
+.artists__container {
+	margin: 2rem 0;
+}
+
+.printed__container {
+	margin: 2.5rem 0;
+}
+
+.printed__container p {
+	margin: 0;
+}
+
+.artists__container {
+	font-size: 2rem;
+}
+
+.printed--flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.printed--flex .printed--item {
+	width: 33.3%;
+	margin-bottom: 4rem;
+}
+
+.printed--item,
+.artists__container a {
+	color: var(--text-color);
+}
+
+.printed--item {
+	font-family: var(--primary-font);
+}
+
+.tab__container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+@media (max-width: 1024px) {
+	header,
+	nav,
+	main,
+	footer {
+		width: 95%;
+		min-width: 95%;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 780px) {
+	.printed--flex .printed--item {
+		width: 50%;
+	}
+}
