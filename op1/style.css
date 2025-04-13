@@ -96,7 +96,7 @@ footer {
 	position: sticky;
 	top: 12px;
 	margin-top: 2rem;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--text-color);
@@ -211,6 +211,8 @@ h5,
 	display: grid;
 	grid-template-columns: 1fr 4fr 1fr;
 	width: 100%;
+	align-items: baseline;
+	margin-bottom: 1rem;
 }
 
 a {
@@ -226,18 +228,19 @@ a {
 }
 
 .exhibition--details p {
-	margin-top: 0;
+	margin: 0;
 	padding: 0 0.25rem;
 }
 
 .exhibition--details p:first-child {
 	grid-column: 1;
 	grid-row: 1;
-	/* text-align: left; */
+	text-align: left;
 }
 .exhibition--details p:nth-of-type(2) {
 	grid-column: 3;
 	grid-row: 1;
+	text-align: right;
 }
 
 
@@ -245,7 +248,7 @@ a {
 	color: var(--grey);
 	grid-row: 2;
 	grid-column: 2;
-	/* text-align: left; */
+	
 }
 
 .exhibition--details h2,
@@ -268,8 +271,11 @@ img {
 	width: inherit;
 }
 
+.exhibition__container {
+		margin: 1rem 0;
+}
+
 .archive__container,
-.exhibition__container,
 .artists__container {
 	margin: 2rem 0;
 }
