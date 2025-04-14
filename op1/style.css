@@ -48,7 +48,9 @@ body {
 	margin: 0 auto;
 }
 
+/* ------------------------------------------ */
 /* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
+/* ------------------------------------------ */
 
 header,
 nav,
@@ -69,7 +71,7 @@ header h3 {
 	margin-bottom: 0.5rem;
 }
 
-header p {
+.header__container p {
 	margin: 0.25em 0 0 0;
 	font-size: 12px;
 }
@@ -84,11 +86,11 @@ header p {
 	width: auto;
 }
 
-footer {
+/* footer {
 	display: none;
 	border-top: 1px solid var(--secondary-color);
 	margin: 4rem 0 2rem 0;
-}
+} */
 
 /* STYLING FOR DROP DOWN NAVIGATION MENU */
 .nav-dropdown {
@@ -145,7 +147,7 @@ footer {
 	text-transform: uppercase;
 }
 
-/* STYLING FOR PAGE*/
+/* GENERAL WEBSITE STYLING */
 
 .page-section {
 	display: none;
@@ -234,7 +236,7 @@ img {
 	text-decoration: none;
 }
 
-.exhibition--img {
+.exhibition--img, .exhibition--content {
 	width: 100%;
 }
 
@@ -303,10 +305,6 @@ img {
 	margin: 0.5rem 0;
 }
 
-/* .archive .archive__container .exhibition--details:hover {
-	transform: scale(1.25);
-	transition: linear 0.25s;
-} */
 
 .archive .archive__container p {
 	margin: 0 0 0.25rem 0;
@@ -357,7 +355,6 @@ img {
 	content: ", ";
 }
 
-
 @media (max-width: 1024px) {
 	header,
 	nav,
@@ -373,4 +370,86 @@ img {
 	.printed--flex .printed--item {
 		width: 50%;
 	}
+}
+
+/* ---------------------------- */
+/* STYLING FOR EXHIBITION PAGES */
+/* ---------------------------- */
+
+.page-exhibition nav {
+	width: 100%;
+	margin: 1rem 0
+}
+
+.page-exhibition nav span {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.page-exhibition nav a:hover p {
+	font-style: italic;
+}
+
+.page-exhibition header nav span {
+	border-bottom: 1px solid var(--text-color);
+}
+
+.page-exhibition header nav span p {
+		padding-bottom: 0.25rem;
+}
+
+.page-exhibition footer nav span {
+	border-top: 1px solid var(--text-color);
+}
+
+.page-exhibition footer nav span p {
+	padding-top: 0.25rem;
+}
+
+.page-exhibition nav span p {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	font-family: var(--primary-font);
+	margin: 0;
+}
+
+.page-exhibition .exhibition__header {
+	margin: 2rem 0;
+	text-align: center;
+}
+
+.page-exhibition .exhibition__header h2:first-of-type  {
+	margin-bottom: 1rem;
+}
+
+.page-exhibition .exhibition__header h2 +  h2 {
+	font-family: var(--secondary-font);
+}
+
+.page-exhibition .exhibition__header h2:nth-of-type(3) {
+	color: var(--grey);
+}
+
+.page-exhibition .exhibition__content {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+.page-exhibition .exhibition__content p {
+	line-height: 1.24rem;
+	text-align: justify;
+}
+
+.page-exhibition .exhibition__content .para--title {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.page-exhibition .exhibition__content .link--primary {
+	color:  var(--primary-color);
+}
+
+.page-exhibition .exhibition__content .link--secondary {
+	text-decoration: underline;
 }
