@@ -19,7 +19,7 @@
 
 	<body>
 		<!-- THIS IS  THE LOGO HEADER FOR THE WEBSITE -->
-		<header>
+		<header class="header-menu">
 			<div class="header__container">
 				<img
 					id="sixteen"
@@ -29,27 +29,93 @@
 				/>
 				<p>1616 Dupont St Toronto, ON M6P 3S7</p>
 			</div>
+			<nav class="nav-dropdown">
+				<select
+					class="page-toggle"
+					data-target=".main__wrapper"
+					aria-label="Page selection"
+				>
+					<option selected value="exhibition" data-show=".exhibition">
+						Exhibition
+					</option>
+					<option value="archive" data-show=".archive">Archive</option>
+					<option value="printed" data-show=".printed">Printed</option>
+					<option value="artists" data-show=".artists">Artists</option>
+				</select>
+			</nav>
+			<span class="tab__container op1">
+				<button
+					onclick="exhibitionToggle(event, 'now-exhibition')"
+					id="defaultExhibition"
+					class="tab--item exhibitionTab"
+				>
+					Now
+				</button>
+				<button
+					onclick="exhibitionToggle(event, 'next-exhibition')"
+					class="tab--item exhibitionTab"
+				>
+					Next
+				</button>
+			</span>
+
+			<span class="tab__container op2">
+				<button
+					onclick="archiveToggle(event, 'all-archive')"
+					id="defaultArchive"
+					class="tab--item archiveTab"
+				>
+					All
+				</button>
+				<button
+					onclick="archiveToggle(event, '2025-archive')"
+					class="tab--item archiveTab"
+				>
+					2025
+				</button>
+							</span>
+				<span class="tab__container op3">
+					<button
+						onclick="printedToggle(event, 'all-printed')"
+						id="defaultPrinted"
+						class="tab--item printedTab"
+					>
+						All
+					</button>
+					<button
+						onclick="printedToggle(event, 'limited-printed')"
+						class="tab--item printedTab"
+					>
+						2025
+					</button>
+				</span>
+				<span class="tab__container op4">
+					<button
+						onclick="artistsToggle(event, 'all-artists')"
+						id="defaultArtists"
+						class="tab--item artistsTab"
+					>
+						All
+					</button>
+					<button
+						onclick="artistsToggle(event, 'AL-artists')"
+						class="tab--item artistsTab"
+					>
+						A-L
+					</button>
+					<button
+						onclick="artistsToggle(event, 'MZ-artists')"
+						class="tab--item artistsTab"
+					>
+						M-Z
+					</button>
+				</span>
 		</header>
 
-		<!-- THIS IS  DROPDOWN FOR THE WEBSITE -->
-		<nav class="nav-dropdown">
-			<select
-				class="page-toggle"
-				data-target=".main__wrapper"
-				aria-label="Page selection"
-			>
-				<option selected value="exhibition" data-show=".exhibition">
-					EXHIBITION
-				</option>
-				<option value="archive" data-show=".archive">ARCHIVE</option>
-				<option value="printed" data-show=".printed">PRINTED</option>
-				<option value="artists" data-show=".artists">ARTISTS</option>
-			</select>
-		</nav>
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
-				<span class="tab__container">
+				<!-- <span class="tab__container">
 					<button
 						onclick="exhibitionToggle(event, 'now-exhibition')"
 						id="defaultExhibition"
@@ -63,10 +129,14 @@
 					>
 						Next
 					</button>
-				</span>
+				</span> -->
 
 				<div id="now-exhibition" class="exhibition__container">
-					<a href="" title="" target="_blank">
+					<a
+						href="pages/memories-and-premonitions.htm"
+						title=""
+						target="_blank"
+					>
 						<div class="exhibition--details">
 							<p>Nov 9 &#8212;</p>
 							<p>&#8212; Apr 30</p>
@@ -74,7 +144,7 @@
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
 						</div>
 						<div class="exhibition--img">
-							<img src="img/exhibition/G44-Studio 1616-007.jpeg" />
+							<img src="exhibition/now/G44-Studio 1616-007.jpeg" />
 						</div>
 					</a>
 				</div>
@@ -95,7 +165,7 @@
 				</div>
 			</div>
 			<div class="page-section archive">
-				<span class="tab__container">
+				<!-- <span class="tab__container">
 					<button
 						onclick="archiveToggle(event, 'all-archive')"
 						id="defaultArchive"
@@ -109,11 +179,11 @@
 					>
 						2025
 					</button>
-				</span>
+				</span> -->
 
 				<div id="all-archive" class="archive__container">
 					<section>
-								<h2 class="placeholder">No previous shows yet</h2>
+						<h2 class="placeholder">No previous shows yet</h2>
 						<!-- <a href="" title="" target="_blank" class="exhibition--details">
 							<h2>Memories And Premonitions</h2>
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
@@ -124,7 +194,7 @@
 
 				<div id="2025-archive" class="archive__container">
 					<section>
-							<h2 class="placeholder">No previous shows yet</h2>
+						<h2 class="placeholder">No previous shows yet</h2>
 						<!-- <a href="" title="" target="_blank" class="exhibition--details">
 							<h2>Memories And Premonitions</h2>
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
@@ -135,25 +205,11 @@
 			</div>
 
 			<div class="page-section printed">
-				<span class="tab__container">
-					<button
-						onclick="printedToggle(event, 'all-printed')"
-						id="defaultPrinted"
-						class="tab--item printedTab"
-					>
-						All
-					</button>
-					<button
-						onclick="printedToggle(event, 'limited-printed')"
-						class="tab--item printedTab"
-					>
-						2025
-					</button>
-				</span>
-
 				<div id="all-printed" class="printed__container">
 					<section>
-							<h2 class="placeholder">No printed works available at the moment</h2>
+						<h2 class="placeholder">
+							No printed works available at the moment
+						</h2>
 						<!-- <a class="printed--item" href="" target="_blank" title="">
 							<img width="200px" height="200px" src="" title="printed-img" />
 							<h2>title</h2>
@@ -189,7 +245,9 @@
 
 				<div id="limited-printed" class="printed__container">
 					<section>
-						<h2 class="placeholder">No printed works available at the moment</h2>
+						<h2 class="placeholder">
+							No printed works available at the moment
+						</h2>
 						<!-- <a class="printed--item" href="" target="_blank" title="">
 							<img width="200px" height="200px" src="" title="printed-img" />
 							<h2>title</h2>
@@ -201,7 +259,7 @@
 			</div>
 
 			<div class="page-section artists">
-				<span class="tab__container">
+				<!-- <span class="tab__container">
 					<button
 						onclick="artistsToggle(event, 'all-artists')"
 						id="defaultArtists"
@@ -221,15 +279,35 @@
 					>
 						M-Z
 					</button>
-				</span>
+				</span> -->
 				<div id="all-artists" class="artists__container">
-					<a href="https://www.delalicofie.com/" title="www.delalicofie.com" target="_blank">Delali Cofie</a>
-					<a href="https://mayworks.ca/artist/julianna-a-s/" title="mayworks festival" target="_blank">Julianna A.S.</a>
+					<a
+						href="https://www.delalicofie.com/"
+						title="www.delalicofie.com"
+						target="_blank"
+						>Delali Cofie</a
+					>
+					<a
+						href="https://mayworks.ca/artist/julianna-a-s/"
+						title="mayworks festival"
+						target="_blank"
+						>Julianna A.S.</a
+					>
 					<a href="" title="" target="_blank">Kourtney Jackson</a>
 				</div>
 				<div id="AL-artists" class="artists__container">
-					<a href="https://www.delalicofie.com/" title="www.delalicofie.com" target="_blank">Delali Cofie</a>
-					<a href="https://mayworks.ca/artist/julianna-a-s/" title="mayworks festival" target="_blank">Julianna A.S.</a>
+					<a
+						href="https://www.delalicofie.com/"
+						title="www.delalicofie.com"
+						target="_blank"
+						>Delali Cofie</a
+					>
+					<a
+						href="https://mayworks.ca/artist/julianna-a-s/"
+						title="mayworks festival"
+						target="_blank"
+						>Julianna A.S.</a
+					>
 					<a href="" title="" target="_blank">Kourtney Jackson</a>
 				</div>
 				<div id="MZ-artists" class="artists__container">
@@ -238,16 +316,17 @@
 			</div>
 		</main>
 
-		<footer>
+		<!-- <footer>
 			<p></p>
 			<p></p>
-		</footer>
+		</footer> -->
 
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.min.js"
 			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			crossorigin="anonymous"
 		></script>
-		<script src="script.js"></script>
+		<script src="js/header.js"></script>
+		<script src="js/script.js"></script>
 	</body>
 </html>

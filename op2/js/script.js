@@ -1,35 +1,27 @@
-var sixteensixteens = [
-	'1616-header/sixteen.svg',
-	'1616-header/sixteensixteeeeeen.svg',
-	'1616-header/sixteensixteeeeen.svg',
-	'1616-header/sixteensixteeeen.svg',
-	'1616-header/sixteensixteeen.svg',
-	'1616-header/sixteensixteen.svg',
-];
-
-// Dropdown Page Navigation (jQuery):
+// hide/show tab item based on dropdown selection
 $(document).ready(function () {
-		var randomNumber = Math.floor(Math.random() * sixteensixteens.length);
-		$('#sixteen').attr('src', sixteensixteens[randomNumber]);
-
-	$('.page-toggle').on('change', function () {
-		var selectedClass = $(this).find(':selected').attr('data-show');
-
-		// hide-show page sections accordingly
-		$('.page-section').hide();
-		$(selectedClass).fadeIn();
-	});
-
-	$('.navigate-to-tab').on('click', function () {
-		var targetArchive = $(this).data('value');
-		$('.page-toggle').val(targetArchive).change();
-	});
-
-	$('.page-section').hide();
-	$('.page-toggle option:selected').each(function () {
-		var selectedClass = $(this).attr('data-show');
-		$(selectedClass).show();
-	});
+	$('select')
+		.change(function () {
+			$('select option:selected').each(function () {
+				if ($(this).attr('value') == 'exhibition') {
+					$('.tab__container').hide();
+					$('.op1').show();
+				}
+				if ($(this).attr('value') == 'archive') {
+					$('.tab__container').hide();
+					$('.op2').show();
+				}
+				if ($(this).attr('value') == 'printed') {
+					$('.tab__container').hide();
+					$('.op3').show();
+				}
+				if ($(this).attr('value') == 'artists') {
+					$('.tab__container').hide();
+					$('.op4').show();
+				}
+			});
+		})
+		.change();
 });
 
 // Exhibition Tabs

@@ -48,15 +48,16 @@ body {
 	margin: 0 auto;
 }
 
+/* ------------------------------------------ */
 /* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
+/* ------------------------------------------ */
 
 header,
-nav,
 main,
 footer {
-	width: 50%;
-	min-width: 800px;
-	margin: 0 auto;
+	/* width: 50%;
+	min-width: 800px; */
+	margin: 0 1rem;
 }
 
 header,
@@ -69,13 +70,16 @@ header h3 {
 	margin-bottom: 0.5rem;
 }
 
-header p {
-	margin: 0.25em 0 0 0;
-	font-size: 12px;
+.header-menu {
+	display: grid;
+	grid-template-columns: 1fr 4fr 1fr;
+	padding: 1rem 0;
 }
 
-.header__container {
-	margin: 1rem 0;
+
+.header__container p {
+	margin: 0.25em 0 0 0;
+	font-size: 12px;
 }
 
 .header__container img {
@@ -84,28 +88,28 @@ header p {
 	width: auto;
 }
 
-footer {
-	display: none;
-	border-top: 1px solid var(--secondary-color);
-	margin: 4rem 0 2rem 0;
+.menu__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
-/* STYLING FOR DROP DOWN NAVIGATION MENU */
+.nav-dropdown select, .tab__container {
+	padding: 0 1rem;
+}
+
 .nav-dropdown {
-	position: sticky;
-	top: 12px;
-	margin-top: 1.5rem;
-	margin-bottom: 1.5rem;
-	text-align: center;
-	text-transform: uppercase;
 	color: var(--text-color);
-	border: 1px solid var(--text-color);
-	border-radius: 0;
 	background: white;
 	cursor: pointer;
 	display: grid;
 	align-items: center;
 	grid-template-areas: 'select';
+	padding: 0;
+	font-family: var(--primary-font);
+	height: 100%;
+	grid-column: 2;
+	
 }
 
 .nav-dropdown::after {
@@ -116,13 +120,12 @@ footer {
 	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 	grid-area: select;
 	justify-self: end;
-	margin-right: 0.5rem;
+	margin-right: 1rem;
 }
 
 .nav-dropdown select {
 	width: 100%;
 	text-align: center;
-	text-transform: uppercase;
 	appearance: none;
 	outline: none;
 	border: none;
@@ -133,19 +136,44 @@ footer {
 	font-size: 1rem;
 	line-height: inherit;
 	margin: 0;
-	padding: 0;
 	grid-area: select;
+	border: 1px solid var(--text-color);
 }
 
 .nav-dropdown select::-ms-expand {
 	display: none;
 }
 
-.nav-dropdown option {
-	text-transform: uppercase;
+
+.tab__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	grid-column: 3;
 }
 
-/* STYLING FOR PAGE*/
+.tab--item {
+	color: var(--grey);
+	background: white;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-align: center;
+	width: inherit;
+	margin: 0;
+	border: 1px solid white;
+	border-radius: 100%;
+}
+
+.op1 button, .op2 button, .op4 button  {
+	width: calc(100% / 2);
+}
+
+.op3 button  {
+	width: calc(100% / 3);
+}
+
+/* GENERAL WEBSITE STYLING */
 
 .page-section {
 	display: none;
@@ -159,21 +187,14 @@ footer {
 	display: block;
 }
 
-.tab--item {
-	color: var(--grey);
-	background: white;
-	font-weight: normal;
-	text-transform: uppercase;
-	border: none;
-}
-
 .active,
 .active:hover,
 h5 {
 	color: var(--primary-color);
+	border: 1px solid var(--primary-color);
 }
 
-.active::before {
+/* .active::before {
 	content: '(';
 	color: var(--primary-color);
 }
@@ -181,7 +202,7 @@ h5 {
 .active::after {
 	content: ')';
 	color: var(--primary-color);
-}
+} */
 
 h2,
 h5 {
@@ -206,6 +227,12 @@ a {
 
 img {
 	width: inherit;
+}
+
+.main__wrapper,
+.menu__container {
+	margin: 0 1rem;
+	grid-column: 2;
 }
 
 .placeholder {
@@ -234,11 +261,13 @@ img {
 	text-decoration: none;
 }
 
-.exhibition--img {
+.exhibition--img,
+.exhibition--content {
 	width: 100%;
 }
 
-.exhibition__container, .archive__container,
+.exhibition__container,
+.archive__container,
 .artists__container {
 	margin: 2rem 0;
 }
@@ -246,13 +275,6 @@ img {
 .printed--item,
 .artists__container a {
 	color: var(--text-color);
-}
-
-.tab__container {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
 }
 
 /* --> exhibition page */
@@ -266,7 +288,7 @@ img {
 
 .exhibition .exhibition--details h2 {
 	color: var(--text-color);
-		/* text-transform: uppercase; */
+	/* text-transform: uppercase; */
 	grid-column: 2;
 	grid-row: 1;
 }
@@ -291,6 +313,7 @@ img {
 	color: var(--grey);
 	grid-row: 2;
 	grid-column: 2;
+	font-family: var(--secondary-font);
 }
 
 /* --> archive page */
@@ -302,11 +325,6 @@ img {
 .archive .archive__container .exhibition--details {
 	margin: 0.5rem 0;
 }
-
-/* .archive .archive__container .exhibition--details:hover {
-	transform: scale(1.25);
-	transition: linear 0.25s;
-} */
 
 .archive .archive__container p {
 	margin: 0 0 0.25rem 0;
@@ -344,7 +362,7 @@ img {
 }
 
 /* --> artist page */
-.artists .artists__container a  {
+.artists .artists__container a {
 	font-size: 2rem;
 	font-family: var(--primary-font);
 }
@@ -353,10 +371,9 @@ img {
 	font-style: italic;
 }
 
-.artists .artists__container a:not(:last-of-type)::after  {
-	content: ", ";
+.artists .artists__container a:not(:last-of-type)::after {
+	content: ', ';
 }
-
 
 @media (max-width: 1024px) {
 	header,
@@ -373,4 +390,86 @@ img {
 	.printed--flex .printed--item {
 		width: 50%;
 	}
+}
+
+/* ---------------------------- */
+/* STYLING FOR EXHIBITION PAGES */
+/* ---------------------------- */
+
+.page-exhibition nav {
+	width: 100%;
+	margin: 1rem 0;
+}
+
+.page-exhibition nav span {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.page-exhibition nav a:hover p {
+	font-style: italic;
+}
+
+.page-exhibition header nav span {
+	border-bottom: 1px solid var(--text-color);
+}
+
+.page-exhibition header nav span p {
+	padding-bottom: 0.25rem;
+}
+
+.page-exhibition footer nav span {
+	border-top: 1px solid var(--text-color);
+}
+
+.page-exhibition footer nav span p {
+	padding-top: 0.25rem;
+}
+
+.page-exhibition nav span p {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	font-family: var(--primary-font);
+	margin: 0;
+}
+
+.page-exhibition .exhibition__header {
+	margin: 2rem 0;
+	text-align: center;
+}
+
+.page-exhibition .exhibition__header h2:first-of-type {
+	margin-bottom: 1rem;
+}
+
+.page-exhibition .exhibition__header h2 + h2 {
+	font-family: var(--secondary-font);
+}
+
+.page-exhibition .exhibition__header h2:nth-of-type(3) {
+	color: var(--grey);
+}
+
+.page-exhibition .exhibition__content {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+.page-exhibition .exhibition__content p {
+	line-height: 1.24rem;
+	text-align: justify;
+}
+
+.page-exhibition .exhibition__content .para--title {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.page-exhibition .exhibition__content .link--primary {
+	color: var(--primary-color);
+}
+
+.page-exhibition .exhibition__content .link--secondary {
+	text-decoration: underline;
 }
