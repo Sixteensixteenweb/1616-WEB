@@ -167,6 +167,10 @@ header h3 {
 	cursor: pointer;
 }
 
+.tab--item:hover {
+color: var(--primary-color);
+}
+
 .op1 button,
 .op2 button,
 .op3 button {
@@ -198,16 +202,6 @@ h5 {
   border: 1px dotted var(--primary-color);
   border-radius: 0.5rem;
 }
-
-/* .active::before {
-	content: '(';
-	color: var(--primary-color);
-}
-
-.active::after {
-	content: ')';
-	color: var(--primary-color);
-} */
 
 h2,
 h5 {
@@ -244,6 +238,7 @@ img {
 	font-family: var(--secondary-font);
 	margin: 0 auto;
 	font-style: italic;
+font-size: 1rem;
 }
 
 .exhibition__container,
@@ -271,7 +266,7 @@ img {
 
 .exhibition__container,
 .archive__container,
-.artists__container {
+.artists__container, .printed__container {
 	margin: 1rem 0;
 }
 
@@ -335,10 +330,6 @@ margin: 0;
 }
 
 /* --> printed page */
-.printed__container {
-	margin: 2.5rem 0;
-}
-
 .printed__container p {
 	margin: 0;
 }
@@ -366,13 +357,19 @@ margin: 0;
 }
 
 /* --> artist page */
+
+.artists .artists__container {
+	margin: 2rem 0;
+}
+
 .artists .artists__container a {
-	font-size: 2rem;
-	font-family: var(--primary-font);
+	font-size: calc(3em + 2vw);
+	font-family: var(--secondary-font);
+	line-height: 1.72ch;
 }
 
 .artists .artists__container a:hover {
-	font-style: italic;
+	color: var(--primary-color);
 }
 
 .artists .artists__container a:not(:last-of-type)::after {
@@ -396,13 +393,42 @@ margin: 0;
 		margin: 0 auto;
 	}
 	
+	.header-menu {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	padding: 1rem 0;
+}
+
 }
 
 @media (max-width: 780px) {
-	.printed--flex .printed--item {
-		width: 50%;
+	nav {
+		margin: 0;
 	}
 
+	.tab__container {
+		justify-content: center;
+	}
+
+	.op1 button, .op2 button, .op3 button, .op4 button {
+		width: auto;
+	}
+
+		.active {
+			border: none;
+		}
+
+		.active::before {
+			content: "(";
+		}
+
+		.active::after {
+			content: ")";
+		}
+	.active,
+.active:hover {
+
+}
 	.main__wrapper,
 .menu__container {
 	margin: 0 auto;
@@ -413,6 +439,27 @@ margin: 0;
 		min-width: 90%;
 		max-width: 90%;
 	}
+
+	.header-menu {
+	/* display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	padding: 1rem 0; */
+	display: block;
+}
+
+.nav-dropdown {
+	padding: 1rem 0;
+	width: 100%;
+}
+
+.tab__container {
+	padding: 0;
+}
+
+.printed--flex .printed--item {
+		width: 50%;
+	}
+
 
 }
 
