@@ -137,7 +137,7 @@ header h3 {
 	margin: 0;
 	grid-area: select;
 	border-radius: 0.5rem;
-	box-shadow: #d5d5d5 0 0 12px 6px inset;
+	box-shadow: #d5d5d5 0 0 12px 4px inset;
 	padding: 0.15rem 0;
 }
 
