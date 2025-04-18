@@ -136,9 +136,8 @@ header h3 {
 	line-height: inherit;
 	margin: 0;
 	grid-area: select;
-	border: 1px solid var(--grey);
 	border-radius: 0.5rem;
-	/* box-shadow: #d5d5d5 0 0 12px 6px inset; */
+	box-shadow: #d5d5d5 0 0 12px 6px inset;
 	padding: 0.15rem 0;
 }
 
@@ -155,7 +154,7 @@ header h3 {
 }
 
 .tab--item {
-	color: var(--grey);
+	color: var(--text-color);
 	background: white;
 	font-weight: normal;
 	font-size: 1rem;
@@ -165,6 +164,7 @@ header h3 {
 	margin: 0;
 	border: 1px solid white;
 	border-radius: 100%;
+	cursor: pointer;
 }
 
 .op1 button,
@@ -195,7 +195,8 @@ header h3 {
 .active:hover,
 h5 {
 	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
+  border: 1px dotted var(--primary-color);
+  border-radius: 0.5rem;
 }
 
 /* .active::before {
@@ -234,7 +235,7 @@ img {
 
 .main__wrapper,
 .menu__container {
-	margin: 0 1rem;
+	margin: 0 calc(0.5em +  1vw);
 	grid-column: 2;
 }
 
@@ -264,7 +265,6 @@ img {
 	text-decoration: none;
 }
 
-.exhibition--img,
 .exhibition--content {
 	width: 100%;
 }
@@ -282,43 +282,42 @@ img {
 
 /* --> exhibition page */
 .exhibition .exhibition--details {
-	width: 100%;
-	margin-bottom: 0;
+	width: 50%;
+	margin: 2rem auto;
+	word-break: keep-all;
+	max-width: 800px;
 }
+
 
 .exhibition .exhibition--details h2 {
 	color: var(--text-color);
-	line-height: 1.78ch;
+	line-height: 1.48ch;
+	margin: 0.5rem 0;
 }
 
 .exhibition .exhibition--details p {
-	margin: 0;
 	padding: 0;
-	font-size: 3rem;
+	font-size: 2rem;
+margin: 0;
 }
 
 .exhibition .exhibition--details h2:nth-of-type(1) {
 	text-transform: uppercase;
-	font-size: calc(5rem);
-	margin: 0.5rem 0;
+	font-size: calc(3em + 2vw);
 }
 
-.exhibition .exhibition--details h2 + h2 {
+.exhibition .exhibition--details h2:nth-of-type(2) {
 	color: var(--grey);
 	font-size: 2rem;
-	width: 50%;
-	margin: 0 auto;
 }
 
-.exhibition .exhibition--img {
+.exhibition img {
 	width: 60vh;
-	margin: 5vh auto;
-}
-
-.exhibition .exhibition--img img {
-	width: 100%;
-	border: 1px solid black;
-  padding: 0.25rem;
+  margin: 1rem auto;
+		max-width: calc(50vw - calc(0.5em + 1vw)*2);
+		min-width: 500px;
+  border: 1px inset black;
+  padding: 1px;
 }
 
 /* --> archive page */
@@ -380,21 +379,41 @@ img {
 	content: ', ';
 }
 
+/* Break points for smaller Screens  */
 @media (max-width: 1024px) {
 	header,
 	nav,
 	main,
-	footer {
+	footer, .exhibition .exhibition--details {
 		width: 95%;
 		min-width: 95%;
+	}
+
+		header,
+	nav,
+	main,
+	footer{
 		margin: 0 auto;
 	}
+	
 }
 
 @media (max-width: 780px) {
 	.printed--flex .printed--item {
 		width: 50%;
 	}
+
+	.main__wrapper,
+.menu__container {
+	margin: 0 auto;
+}
+
+.exhibition img {
+		width: 90%;
+		min-width: 90%;
+		max-width: 90%;
+	}
+
 }
 
 /* ---------------------------- */
