@@ -383,7 +383,7 @@ margin: 0;
 	header,
 	nav,
 	main,
-	footer, .exhibition .exhibition--details {
+	footer, .exhibition .exhibition--details, .page-exhibition .exhibition__header, .page-exhibition .exhibition__content {
 		width: 95%;
 		min-width: 95%;
 	}
@@ -443,9 +443,6 @@ margin: 0;
 	}
 
 	.header-menu {
-	/* display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	padding: 1rem 0; */
 	display: block;
 }
 
