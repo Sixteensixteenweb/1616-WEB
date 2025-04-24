@@ -71,19 +71,19 @@ header h3 {
 	margin-bottom: 0.5rem;
 }
 
-.header__container p {
-	margin: 0.25em 0 0 0;
-	font-size: 12px;
-}
-
 .header__container {
 	margin: 1rem 0;
 }
 
 .header__container img {
 	min-width: 20%;
-	height: 60px;
+	height: 42px;
 	width: auto;
+}
+
+.header__container p {
+	margin: 0.25em 0 0 0;
+	font-size: 10px;
 }
 
 /* footer {
