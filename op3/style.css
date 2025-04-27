@@ -52,7 +52,7 @@ body {
 /* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
 /* ------------------------------------------ */
 
-header, main,
+header, .main__wrapper .exhibition__container .exhibition--details, .page-exhibition .main__wrapper,
 footer {
 	width: 50%;
 	min-width: 800px;
@@ -309,12 +309,6 @@ margin: 2rem auto;
 	font-style: italic;
 }
 
-.exhibition .exhibition--details .exhibition--img {
-	width: 100%;
-  margin: 0 auto;
-
-}
-
 .exhibition .exhibition--details .exhibition--img img {
 	width: 100%;
 	height: auto;
@@ -326,12 +320,23 @@ margin: 2rem auto;
 	flex-direction: column;
 }
 
-.archive .archive__container .exhibition--details {
+.archive .archive__container .exhibition--details:not(:first-of-type) {
 	margin: 0.5rem 0;
 }
 
 .archive .archive__container p {
 	margin: 0 0 0.25rem 0;
+}
+
+
+.archive .archive__container p:nth-of-type(2) {
+	font-family: var(--secondary-font);
+	color: var(--grey);
+	font-size: 1.25rem;
+}
+
+.archive .archive__container .exhibition--details h2 {
+	text-transform: uppercase;
 }
 
 /* --> printed page */
@@ -348,8 +353,8 @@ margin: 2rem auto;
 .printed .printed__container .printed--item {
 	width: calc(100% / 3);
 	height: fit-content;
-	padding: 0 1rem;
 	margin-bottom: 4rem;
+	min-width: 225px;
 }
 
 .printed .printed__container .printed--item img {
@@ -364,14 +369,16 @@ margin: 2rem auto;
 /* --> artist page */
 
 .artists .artists__container {
-	margin: 2rem 0;
+	margin: 2rem;
 }
 
+
 .artists .artists__container a {
-	font-size: calc(3em + 2vw);
-	font-family: var(--secondary-font);
-	line-height: 1.72ch;
+	text-transform: capitalize;
+  font-size: calc(2em + 1vw);
+  line-height: 1.72ch;
 }
+	
 
 .artists .artists__container a:hover {
 	color: var(--primary-color);
@@ -390,27 +397,21 @@ margin: 2rem auto;
 	margin: 1rem auto;
 }
 
-.page-exhibition nav a::before {
-	content: '( ';
-}
-
-.page-exhibition nav a::after {
-	content: ' )';
-}
-
 .page-exhibition nav a:hover {
-	color: var(--primary-color);
+	color: white;
+	background: var(--primary-color);
+		border: 1px solid var(--primary-color);
 }
 
 .page-exhibition nav a {
 	font-size: 10px;
-	text-transform: capitalize;
 	font-family: var(--primary-font);
 	margin: 0;
 	position: fixed;
 	padding: 0;
-	border-radius: 100%;
 	mix-blend-mode: exclusion;
+	border: 1px solid var(--text-color);
+	padding: 0 0.5rem
 }
 
 .page-exhibition nav a:nth-of-type(1),
@@ -434,7 +435,7 @@ margin: 2rem auto;
 }
 
 .page-exhibition .exhibition__header {
-	margin: 5.5rem auto 2rem auto;
+	margin: 6rem auto 2rem auto;
 	text-align: center;
 }
 
@@ -478,22 +479,18 @@ margin: 2rem auto;
 	header,
 	nav,
 	main,
-	footer,
-	.exhibition .exhibition--details,
-	.page-exhibition .exhibition__content {
+	footer, 
+	.exhibition .exhibition--details {
 		margin: 0 auto;
 	}
 
-	header,
-	nav,
-	main,
-	footer {
-		margin: 0 auto;
-	}
-
-		header, main {
+		header, main, .page-exhibition .main__wrapper {
 			min-width: 100%;
 			padding: 0 1rem;
+		}
+
+		.main__wrapper .exhibition__container .exhibition--details {
+			min-width: 100%;
 		}
 
 	.page-exhibition nav a:nth-of-type(2),
@@ -511,6 +508,10 @@ margin: 2rem auto;
 @media (max-width: 780px) {
 	nav {
 		margin: 0;
+	}
+
+	.printed .printed__container section {
+		justify-content: space-around;
 	}
 
 	.printed--flex .printed--item {
