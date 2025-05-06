@@ -193,12 +193,6 @@ header h3 {
 	margin: 0 0 0.25rem 0;
 }
 
-.about p em {
-	font-weight: bold;
-	font-style: normal;
-}
-
-
 /* GENERAL WEBSITE STYLING */
 
 .page-section {
@@ -422,7 +416,7 @@ img {
 }
 
 .page-exhibition header nav span {
-	border-bottom: 1px dotted var(--text-color);
+	border-bottom: 1px solid var(--text-color);
 }
 
 .page-exhibition header nav span p {
@@ -430,7 +424,7 @@ img {
 }
 
 .page-exhibition footer nav span {
-	border-top: 1px dotted var(--text-color);
+	border-top: 1px solid var(--text-color);
 }
 
 .page-exhibition footer nav span p {
