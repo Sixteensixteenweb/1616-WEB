@@ -374,8 +374,8 @@ img {
 }
 
 .printed .printed__container .printed--item img {
-	/* height: 100%; */
-	width: auto;
+height: auto;
+  min-width: 70%;
 }
 
 .printed .printed__container .printed--item p:first-of-type {
