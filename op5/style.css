@@ -214,7 +214,7 @@ header h3 {
 .printed,
 .artists {
 	display: block;
-	min-height: 65vh;
+	min-height: 75vh;
 }
 
 h5 {
@@ -353,6 +353,7 @@ img {
 .artists .artists__container a {
 	font-size: 2rem;
 	line-height: 1.72ch;
+		margin-right: 0.5rem;
 }
 
 .artists .artists__container a:hover {
@@ -433,6 +434,7 @@ img {
 .page-exhibition .exhibition__content p {
 	line-height: 1.24rem;
 	text-align: justify;
+
 }
 
 .page-exhibition .exhibition__content .para--title {
