@@ -1,0 +1,486 @@
+:root {
+	--primary-font: 'Arial', sans-serif;
+	--secondary-font: 'Times', serif;
+	--text-color: #2f2929;
+	--primary-color: rgb(0, 38, 255);
+	--secondary-color: #834a00;
+	--grey-text: rgb(177, 177, 177);
+	--grey: #d0d0d6;
+	color: var(--text-color);
+	font-family: var(--primary-font);
+	cursor: default;
+	font-size: 16px;
+	letter-spacing: 0.0025em;
+	-webkit-animation: var(--fade-in-effect);
+	-moz-animation: var(--fade-in-effect);
+	-ms-animation: var(--fade-in-effect);
+	-o-animation: var(--fade-in-effect);
+	animation: var(--fade-in-effect);
+}
+
+::selection {
+	background: var(--text-color);
+	color: #fff;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+ul {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0 auto;
+}
+
+/* ------------------------------------------ */
+/* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
+/* ------------------------------------------ */
+
+header {
+	/* margin: 1rem auto; */
+	background: var(--grey-text);
+}
+
+header,
+nav,
+main,
+footer {
+	/* width: 50%;
+	min-width: 800px; */
+}
+
+nav,
+main,
+footer {
+	margin: 0 auto;
+}
+
+header,
+footer {
+	text-align: center;
+	font-family: var(--secondary-font);
+}
+
+header h3 {
+	margin-bottom: 0.5rem;
+}
+
+.header__container p {
+	margin: 0.25em 0 0 0;
+	font-size: 10px;
+}
+
+.header__container img {
+	min-width: 20%;
+	height: 50px;
+	width: auto;
+}
+
+.header__container + div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.nav-dropdown select,
+.tab__container {
+	padding: 0;
+}
+
+.nav-dropdown {
+	color: var(--text-color);
+	background: white;
+	display: grid;
+	align-items: baseline;
+	grid-template-areas: 'select';
+	padding: 0;
+	font-family: var(--primary-font);
+	width: 100%;
+}
+
+.nav-dropdown::after {
+	/* content: '↴ ';
+	grid-area: select;
+	margin-left: 6rem; */
+	content: '';
+	width: 0.85rem;
+	height: 0.5em;
+	background-color: var(--primary-color);
+	clip-path: polygon(30% 60%, 0% 0%, 60% 0%);
+	grid-area: select;
+	justify-self: center;
+	margin-left: 6rem;
+}
+
+.nav-dropdown select {
+	width: 100%;
+	border: none;
+	grid-area: select;
+	text-decoration: underline;
+	border-bottom: 1px solid #c3c3c3;
+	color: var(--primary-color);
+}
+
+
+.nav-dropdown select:hover {
+	background: var(--grey);
+}
+
+.nav-dropdown select,
+.tab--item {
+	/* background: white; */
+	font-weight: normal;
+	font-size: 0.85rem;
+	text-transform: capitalize;
+	text-align: center;
+	cursor: pointer;
+	font-family: var(--primary-font);
+	margin: 0;
+	padding: 0.15rem 0;
+	line-height: inherit;
+	appearance: none;
+	outline: none;
+}
+
+.nav-dropdown select::-ms-expand {
+	display: none;
+}
+
+.tab__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: none;
+
+}
+
+.tab--item {
+	width: inherit;
+	border: none;
+	height: min-content;
+}
+
+.tab--item:not(:last-of-type) {
+	/* border-right: 1px solid var(--text-color); */
+}
+
+.active {
+	background: rgb(197, 207, 255);
+	color: var(--primary-color);
+	border-bottom: 1px solid var(--primary-color);
+}
+
+.op1 button,
+.op2 button,
+.op3 button {
+	width: calc(100% / 2);
+}
+
+.op4 button {
+	width: calc(100% / 3);
+}
+
+.about {
+	font-size: 0.85rem;
+	color: var(--secondary-color);
+	margin: 2rem auto;
+	padding-top: 1rem;
+}
+
+.about p {
+	margin: 0 0 0.25rem 0;
+}
+
+/* GENERAL WEBSITE STYLING */
+
+.page-section {
+	display: none;
+	text-align: center;
+}
+
+.tbc {
+	/* text-align: left; */
+	margin: 0 auto;
+}
+
+.exhibition,
+.archive,
+.printed,
+.artists {
+	display: block;
+	min-height: 75vh;
+}
+
+h5 {
+	color: var(--primary-color);
+}
+
+h2,
+h5 {
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+	font-size: 2rem;
+}
+
+h5 {
+	text-transform: uppercase;
+	font-size: 0.85rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--text-color);
+}
+
+img {
+	width: inherit;
+}
+
+.exhibition__container,
+.archive__container,
+.printed__container,
+.artists__container {
+	text-decoration: none;
+}
+
+.exhibition--details h2,
+.printed--item,
+.artists__container a {
+	font-family: var(--secondary-font);
+}
+
+.exhibition--details,
+.printed--item,
+.artists__container a {
+	text-decoration: none;
+}
+
+.exhibition--img,
+.exhibition--content {
+	width: 100%;
+}
+
+.exhibition__container,
+.archive__container,
+.artists__container,
+.printed__container {
+	margin: 2rem 0;
+}
+
+.printed--item,
+.artists__container a {
+	color: var(--text-color);
+}
+
+/* --> exhibition page */
+.exhibition .exhibition--details,
+.page-exhibition .exhibition__header,
+.page-exhibition .exhibition__content {
+	word-break: keep-all;
+}
+
+.exhibition .exhibition--details {
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.exhibition--details p {
+	margin: 0 0 0.5rem 0;
+}
+.exhibition--details h2 {
+	line-height: 1.95ch;
+	text-transform: capitalize;
+}
+
+.exhibition--details p:nth-of-type(2) {
+	font-family: var(--secondary-font);
+	font-style: italic;
+	color: var(--grey-text);
+}
+
+.exhibition .exhibition--details .exhibition--img img {
+	width: 100%;
+	height: auto;
+}
+
+/* --> archive page */
+.archive .archive__container section {
+	display: flex;
+	flex-direction: column;
+}
+
+.archive .archive__container .exhibition--details:not(:first-of-type) {
+	margin: 0.5rem 0;
+}
+
+/* --> printed page */
+.printed__container p {
+	margin: 0;
+}
+
+.printed .printed__container section {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.printed .printed__container .printed--item {
+	width: calc(100% / 3);
+	height: fit-content;
+	margin-bottom: 4rem;
+	min-width: 225px;
+}
+
+.printed .printed__container .printed--item img {
+	height: auto;
+	min-width: 70%;
+}
+
+.printed .printed__container .printed--item p:first-of-type {
+	font-family: var(--primary-font);
+}
+
+/* --> artist page */
+.artists .artists__container a {
+	font-size: 2rem;
+	line-height: 1.72ch;
+	margin-right: 0.5rem;
+}
+
+.artists .artists__container a:hover {
+	color: var(--primary-color);
+}
+
+.artists .artists__container a:not(:last-of-type)::after {
+	content: ', ';
+}
+
+/* ---------------------------- */
+/* STYLING FOR EXHIBITION PAGES */
+/* ---------------------------- */
+
+.page-exhibition nav {
+	width: 100%;
+	margin: 1rem auto;
+}
+
+.page-exhibition nav span {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.page-exhibition nav a:hover p {
+	color: var(--primary-color);
+}
+
+.page-exhibition header nav span {
+	border-bottom: 1px solid var(--text-color);
+}
+
+.page-exhibition header nav span p {
+	padding-bottom: 0.25rem;
+}
+
+.page-exhibition footer nav span {
+	/* border-top: 1px solid var(--text-color); */
+}
+
+.page-exhibition footer nav span p {
+	padding-top: 0.25rem;
+}
+
+.page-exhibition nav span p {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	font-family: var(--primary-font);
+	margin: 0;
+}
+
+.page-exhibition .exhibition__header {
+	margin: 4rem 0 2rem 0;
+	text-align: center;
+}
+
+.page-exhibition .exhibition__header h2:first-of-type {
+	margin-bottom: 1rem;
+	font-size: 1rem;
+}
+
+.page-exhibition .exhibition__header h2 + h2 {
+	font-family: var(--secondary-font);
+}
+
+.page-exhibition .exhibition__header h2:nth-of-type(3) {
+	color: var(--grey-text);
+	font-style: italic;
+	font-size: 1.5rem;
+}
+
+.page-exhibition .exhibition__content {
+	width: 100%;
+	margin-bottom: 3rem;
+}
+
+.page-exhibition .exhibition__content p {
+	line-height: 1.24rem;
+	text-align: justify;
+}
+
+.page-exhibition .exhibition__content .para--title {
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+.page-exhibition .exhibition__content .link--primary {
+	color: var(--primary-color);
+}
+
+.page-exhibition .exhibition__content .link--secondary {
+	text-decoration: underline;
+}
+
+.page-exhibition .exhibition__content img {
+	width: 100%;
+}
+
+/* Break points for smaller Screens  */
+@media (max-width: 1024px) {
+	header,
+	nav,
+	main,
+	footer {
+		width: 95%;
+		min-width: 95%;
+	}
+}
+
+@media (max-width: 780px) {
+	.printed--flex .printed--item {
+		width: 50%;
+	}
+
+	.printed .printed__container section {
+		justify-content: space-around;
+	}
+}
