@@ -8,7 +8,7 @@
 	--grey-hover: #c3c3c3;
 	--grey-divider: #d0d0d6;
 	--grey-bk: rgb(233, 233, 237);
-		color: var(--text-color);
+	color: var(--text-color);
 	font-family: var(--primary-font);
 	cursor: default;
 	font-size: 16px;
@@ -59,7 +59,6 @@ header {
 	/* margin: 1rem auto; */
 	background: var(--grey-text);
 }
-
 
 nav,
 main,
@@ -136,7 +135,8 @@ header h3 {
 
 .nav-dropdown select,
 .tab--item,
-.page-exhibition nav a, .page-printed nav a,
+.page-exhibition nav a,
+.page-printed nav a,
 .about {
 	font-weight: normal;
 	font-size: 0.85rem;
@@ -257,7 +257,8 @@ img {
 
 .exhibition--details h2,
 .printed--item,
-.artists__container a {
+.artists__container a,
+.page-printed .main__wrapper .printed__content h2 {
 	font-family: var(--secondary-font);
 }
 
@@ -371,15 +372,16 @@ img {
 /* STYLING FOR EXHIBITION PAGES */
 /* ---------------------------- */
 
-
-.page-exhibition nav, .page-printed nav {
+.page-exhibition nav,
+.page-printed nav {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	background: var(--grey-bk);
 }
 
-.page-exhibition nav a, .page-printed nav a {
+.page-exhibition nav a,
+.page-printed nav a {
 	padding: 0.15rem 1rem;
 	line-height: inherit;
 	font-family: var(--primary-font);
@@ -388,15 +390,18 @@ img {
 	width: 100%;
 }
 
-.page-exhibition nav a:hover, .page-printed nav a:hover {
+.page-exhibition nav a:hover,
+.page-printed nav a:hover {
 	background: var(--grey-hover);
 }
 
-.page-exhibition header nav a, .page-printed header nav a {
+.page-exhibition header nav a,
+.page-printed header nav a {
 	border-style: none solid solid solid;
 }
 
-.page-exhibition footer nav a, .page-printed footer nav a {
+.page-exhibition footer nav a,
+.page-printed footer nav a {
 	border-style: solid solid solid none;
 }
 
@@ -404,7 +409,8 @@ img {
 	margin: 4rem 0 2rem 0;
 }
 
-.page-exhibition .exhibition__header {
+.page-exhibition .exhibition__header,
+.page-printed .printed__content {
 	text-align: center;
 }
 
@@ -451,11 +457,9 @@ img {
 	width: 100%;
 }
 
-
 /* ------------------------- */
 /* STYLING FOR PRINTED PAGES */
 /* ------------------------- */
-
 
 .page-printed .main__wrapper {
 	display: grid;
@@ -463,13 +467,77 @@ img {
 	margin: 4rem 0;
 }
 
-
 .page-printed .main__wrapper .printed__imgs img {
 	width: 100%;
 }
 
 .page-printed .main__wrapper .printed__content {
 	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.page-printed .main__wrapper .printed__content div {
+	margin-bottom: 1rem;
+}
+
+.page-printed .main__wrapper .printed__content h2 {
+	font-family: var(--secondary-font);
+}
+
+.page-printed
+	.main__wrapper
+	.printed__content
+	.printed--titles
+	p:first-of-type {
+	margin: 0;
+}
+
+.page-printed
+	.main__wrapper
+	.printed__content
+	.printed--titles
+	h2:nth-of-type(1) {
+	color: var(--primary-color);
+}
+
+.page-printed .main__wrapper .printed__content .printed--details,
+.page-printed .main__wrapper .printed__content .printed--shipping {
+	font-size: 0.85rem;
+}
+
+.page-printed .main__wrapper .printed__content .printed--details {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	list-style: none;
+	justify-content: center;
+}
+
+.page-printed .main__wrapper .printed__content .printed--details li {
+	padding-right: 0.5rem;
+}
+
+.page-printed
+	.main__wrapper
+	.printed__content
+	.printed--details
+	li:not(li:first-of-type) {
+	padding-left: 0.5rem;
+}
+
+.page-printed
+	.main__wrapper
+	.printed__content
+	.printed--details
+	li:not(li:last-of-type) {
+	border-right: 8px dotted var(--text-color);
+}
+
+.page-printed .main__wrapper .printed__content .printed--shipping {
+	border-top: 1px dotted var(--grey-divider);
+	font-style: italic;
+	margin: auto 0 1rem 0;
 }
 
 /* Break points for smaller Screens  */
