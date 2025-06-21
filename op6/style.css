@@ -561,8 +561,7 @@ border: 1px solid black;
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping {
-	/* border-top: 1px dotted var(--grey-divider); */
-	/* font-style: italic; */
+
 	margin: auto 0 1rem 0;
 }
 
