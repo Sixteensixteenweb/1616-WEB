@@ -191,7 +191,7 @@ header h3 {
 	color: var(--secondary-color);
 	margin: 2rem auto;
 	padding-top: 1rem;
-	border-top: 1px solid var(--secondary-color);
+	border-top: 3px double var(--secondary-color);
 }
 
 .about p {
@@ -353,7 +353,7 @@ img {
 .artists .artists__container a {
 	font-size: 2rem;
 	line-height: 1.72ch;
-		margin-right: 0.5rem;
+	margin-right: 0.5rem;
 }
 
 .artists .artists__container a:hover {
@@ -368,38 +368,25 @@ img {
 /* STYLING FOR EXHIBITION PAGES */
 /* ---------------------------- */
 
-.page-exhibition nav {
+.page-exhibition nav,
+.page-printed nav {
 	width: 100%;
 	margin: 1rem auto;
-}
-
-.page-exhibition nav span {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 }
 
-.page-exhibition nav a:hover p {
+.page-exhibition nav a:hover,
+.page-printed nav a:hover {
 	color: var(--primary-color);
 }
 
-.page-exhibition header nav span {
+.page-exhibition header nav a,
+.page-printed header nav a {
 	border-bottom: 1px solid var(--text-color);
-}
-
-.page-exhibition header nav span p {
+	width: 100%;
+	text-align: right;
 	padding-bottom: 0.25rem;
-}
-
-.page-exhibition footer nav span {
-	border-top: 1px solid var(--text-color);
-}
-
-.page-exhibition footer nav span p {
-	padding-top: 0.25rem;
-}
-
-.page-exhibition nav span p {
 	font-size: 0.85rem;
 	text-transform: uppercase;
 	font-family: var(--primary-font);
@@ -434,7 +421,6 @@ img {
 .page-exhibition .exhibition__content p {
 	line-height: 1.24rem;
 	text-align: justify;
-
 }
 
 .page-exhibition .exhibition__content .para--title {
@@ -452,6 +438,48 @@ img {
 
 .page-exhibition .exhibition__content img {
 	width: 100%;
+}
+
+
+/* ------------------------- */
+/* STYLING FOR PRINTED PAGES */
+/* ------------------------- */
+
+.page-printed .printed_imgs img {
+	width: 50%;
+  float: left;
+}
+
+.page-printed .main__wrapper {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+.page-printed .main__wrapper .printed__txtcontent {
+	display: flex;
+	flex-direction: column;
+	padding-left: 1rem;
+}
+
+.page-printed .main__wrapper .printed__txtcontent > * {
+ margin-bottom: 1rem;
+}
+
+.page-printed .main__wrapper .printed__txtcontent p {
+	margin: 0;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--titles h2:first-of-type {
+	color: var(--primary-color);
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--details {
+	font-size: 0.85rem;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
+	border-top: 1px dotted var(--grey);
+	padding: 0.15rem 0;
 }
 
 /* Break points for smaller Screens  */
