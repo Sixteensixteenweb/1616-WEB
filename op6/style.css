@@ -522,27 +522,53 @@ img {
 	.main__wrapper
 	.printed__txtcontent
 	.printed--details
-	li:not(li:first-of-type) {
-	padding-left: 0.5rem;
+	li {
+border: 1px solid black;
+  border-radius: 100%;
+  padding: 0.15rem 3rem;
 }
 
 .page-printed
 	.main__wrapper
 	.printed__txtcontent
 	.printed--details
-	li:not(li:last-of-type) {
-	border-right: 8px dotted var(--text-color);
+	li:nth-of-type(2) {
+ transform: translateX(-1rem);
+}
+
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--details
+	li:nth-of-type(3) {
+ transform: translateX(-2rem);
+}
+
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--details
+	li:nth-of-type(4) {
+ transform: translateX(-3rem);
+}
+
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--details
+	li:nth-of-type(5) {
+ transform: translateX(-4rem);
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping {
-	border-top: 1px dotted var(--grey-divider);
-	font-style: italic;
+	/* border-top: 1px dotted var(--grey-divider); */
+	/* font-style: italic; */
 	margin: auto 0 1rem 0;
 }
 
-/* Break points for smaller Screens  */
-@media (max-width: 1024px) {
-
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
+	border-top: 1px dotted var(--grey-divider);
+	padding: 0.15rem 0;
 }
 
 @media (max-width: 780px) {
