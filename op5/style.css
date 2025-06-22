@@ -483,6 +483,10 @@ img {
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
 	border-top: 1px dotted var(--grey);
 	padding: 0.25rem 0;
+		cursor: pointer;
+}
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping details:hover {
+		cursor: pointer;
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping p {

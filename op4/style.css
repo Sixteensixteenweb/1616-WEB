@@ -374,8 +374,8 @@ img {
 }
 
 .printed .printed__container .printed--item img {
-height: auto;
-  min-width: 70%;
+	height: auto;
+	min-width: 70%;
 }
 
 .printed .printed__container .printed--item p:first-of-type {
@@ -400,38 +400,50 @@ height: auto;
 /* STYLING FOR EXHIBITION PAGES */
 /* ---------------------------- */
 
-.page-exhibition nav {
+.page-exhibition nav,
+.page-printed nav {
 	width: 100%;
 	margin: 1rem auto;
 }
 
-.page-exhibition nav span {
+.page-exhibition nav span,
+.page-printed nav span {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.page-exhibition nav a:hover p {
+.page-exhibition nav a:hover p,
+.page-printed nav a:hover p {
 	color: var(--primary-color);
 }
 
-.page-exhibition header nav span {
+.page-exhibition header nav span,
+.page-printed header nav span {
 	border-bottom: 1px solid var(--text-color);
 }
 
-.page-exhibition header nav span p {
+.page-exhibition header nav span p,
+.page-printed header nav span p {
 	padding-bottom: 0.25rem;
 }
 
-.page-exhibition footer nav span {
+.page-exhibition footer {
+	padding: 1rem;
+}
+
+.page-exhibition footer nav span,
+.page-printed footer nav span {
 	border-top: 1px solid var(--text-color);
 }
 
-.page-exhibition footer nav span p {
+.page-exhibition footer nav span p,
+.page-printed footer nav span p {
 	padding-top: 0.25rem;
 }
 
-.page-exhibition nav span p {
+.page-exhibition nav span p,
+.page-printed nav span p {
 	font-size: 0.85rem;
 	text-transform: uppercase;
 	font-family: var(--primary-font);
@@ -485,6 +497,72 @@ height: auto;
 	width: 100%;
 }
 
+/* ------------------------- */
+/* STYLING FOR PRINTED PAGES */
+/* ------------------------- */
+
+.page-printed .main__wrapper {
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+}
+
+.page-printed .main__wrapper .printed__imgs {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+
+.page-printed .main__wrapper img {
+	height: 40vh;
+	width: auto;
+	max-width: -moz-available;
+	max-width: -webkit-fill-available;
+	max-width: fill-available;
+}
+
+.page-printed .main__wrapper .printed__txtcontent {
+	display: flex;
+	flex-direction: column;
+}
+
+.page-printed .main__wrapper .printed__txtcontent > * {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+
+.page-printed .main__wrapper .printed__txtcontent p {
+	margin: 0;
+}
+
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--titles
+	h2:first-of-type {
+	color: var(--primary-color);
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--details {
+	font-size: 0.85rem;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
+	border-top: 1px dotted var(--grey);
+	padding: 0.25rem 0;
+	cursor: pointer;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping p {
+	margin: 1rem 0;
+	font-size: 0.85rem;
+}
+
 /* Break points for smaller Screens  */
 @media (max-width: 1024px) {
 	header,
@@ -495,6 +573,11 @@ height: auto;
 		min-width: 95%;
 		margin: 0 auto;
 	}
+	.page-printed .main__wrapper img {
+		width: 50%;
+		min-width: 300px;
+		height: auto;
+	}
 }
 
 @media (max-width: 780px) {
@@ -504,5 +587,17 @@ height: auto;
 
 	.printed .printed__container section {
 		justify-content: space-around;
+	}
+
+	.page-printed .main__wrapper .printed__txtcontent {
+		padding: 0;
+		margin: 1rem 0;
+	}
+	.page-printed .main__wrapper .printed__txtcontent > * {
+		text-align: center;
+	}
+
+	.page-printed .main__wrapper .printed__txtcontent h2 {
+		font-size: 1.5rem;
 	}
 }
