@@ -440,14 +440,13 @@ img {
 	width: 100%;
 }
 
-
 /* ------------------------- */
 /* STYLING FOR PRINTED PAGES */
 /* ------------------------- */
 
-.page-printed .printed_imgs img {
+.page-printed .main__wrapper img {
 	width: 50%;
-  float: left;
+	float: left;
 }
 
 .page-printed .main__wrapper {
@@ -462,14 +461,18 @@ img {
 }
 
 .page-printed .main__wrapper .printed__txtcontent > * {
- margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .page-printed .main__wrapper .printed__txtcontent p {
 	margin: 0;
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--titles h2:first-of-type {
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--titles
+	h2:first-of-type {
 	color: var(--primary-color);
 }
 
@@ -479,7 +482,12 @@ img {
 
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
 	border-top: 1px dotted var(--grey);
-	padding: 0.15rem 0;
+	padding: 0.25rem 0;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--shipping p {
+	margin: 1rem 0;
+	font-size: 0.85rem;
 }
 
 /* Break points for smaller Screens  */
@@ -500,5 +508,27 @@ img {
 
 	.printed .printed__container section {
 		justify-content: space-around;
+	}
+
+	.page-printed .main__wrapper .printed__imgs {
+		display: flex;
+		justify-content: center;
+	}
+
+	.page-printed .main__wrapper img {
+		float: none;
+		margin: 0 auto;
+	}
+
+		.page-printed .main__wrapper .printed__txtcontent {
+			padding: 0;
+			margin:  1rem  0;
+		}
+	.page-printed .main__wrapper .printed__txtcontent > * {
+		text-align: center;
+	}
+
+	.page-printed .main__wrapper .printed__txtcontent h2 {
+		font-size: 1.5rem;
 	}
 }
