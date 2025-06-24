@@ -376,11 +376,6 @@ img {
 	flex-direction: row;
 }
 
-.page-exhibition nav a:hover,
-.page-printed nav a:hover {
-	color: var(--primary-color);
-}
-
 .page-exhibition header nav a,
 .page-printed header nav a {
 	border-bottom: 1px solid var(--text-color);
