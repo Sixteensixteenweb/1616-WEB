@@ -419,7 +419,7 @@ img {
 
 .page-exhibition nav a:hover p,
 .page-printed nav a:hover p {
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 }
 
 .page-exhibition header nav span,
@@ -568,12 +568,7 @@ img {
 	padding: 0.25rem 2rem;
 	width: fit-content;
   margin: 0 auto 1rem auto;
-	cursor: pointer;
-}
-
-.page-printed .main__wrapper .printed__txtcontent button:hover {
-	color: var(--primary-color);
-	/* background: rgba(var(--grey), 0.5); */
+	cursor: pointer;	
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
