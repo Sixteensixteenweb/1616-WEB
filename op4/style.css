@@ -357,7 +357,7 @@ img {
 
 /* --> printed page */
 .printed__container p {
-	margin: 0;
+	margin: 0 0 0.25rem 0;
 }
 
 .printed .printed__container section {
@@ -378,8 +378,12 @@ img {
 	min-width: 70%;
 }
 
-.printed .printed__container .printed--item p:first-of-type {
+.printed .printed__container .printed--item p {
 	font-family: var(--primary-font);
+}
+
+.printed .printed__container .printed--item p:nth-of-type(2)::before {
+	content: "";
 }
 
 /* --> artist page */
