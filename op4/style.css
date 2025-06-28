@@ -383,7 +383,7 @@ img {
 }
 
 .printed .printed__container .printed--item p:nth-of-type(2)::before {
-	content: "";
+	content: '';
 }
 
 /* --> artist page */
@@ -552,9 +552,39 @@ img {
 	color: var(--primary-color);
 }
 
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--titles
+	h2:nth-of-type(3) {
+	display: flex;
+	justify-content: center;
+}
+
+.page-printed .main__wrapper .printed__txtcontent button {
+	background: none;
+	text-underline-offset: 2px;
+	font-family: var(--primary-font);
+	padding: 0.25rem 2rem;
+	width: fit-content;
+  margin: 0 auto 1rem auto;
+	cursor: pointer;
+}
+
+.page-printed .main__wrapper .printed__txtcontent button:hover {
+	color: var(--primary-color);
+	/* background: rgba(var(--grey), 0.5); */
+}
+
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
 	font-size: 0.85rem;
+
 }
+
+.page-printed .main__wrapper .printed__txtcontent .printed--details li {
+	list-style: none;
+}
+
 
 .page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
 	border-top: 1px dotted var(--grey);
