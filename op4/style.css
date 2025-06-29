@@ -533,6 +533,7 @@ img {
 .page-printed .main__wrapper .printed__txtcontent {
 	display: flex;
 	flex-direction: column;
+	width: 100%;
 }
 
 .page-printed .main__wrapper .printed__txtcontent > * {
@@ -567,29 +568,59 @@ img {
 	font-family: var(--primary-font);
 	padding: 0.25rem 2rem;
 	width: fit-content;
-  margin: 0 auto 1rem auto;
-	cursor: pointer;	
+	margin: 0 auto 1rem auto;
+	cursor: pointer;
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
 	font-size: 0.85rem;
-
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--details li {
 	list-style: none;
 }
 
-
-.page-printed .main__wrapper .printed__txtcontent .printed--shipping details {
+.page-printed .main__wrapper .printed__txtcontent .printed--order details {
 	border-top: 1px dotted var(--grey);
 	padding: 0.25rem 0;
 	cursor: pointer;
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--shipping p {
+.page-printed .main__wrapper .printed__txtcontent .printed--order p {
 	margin: 1rem 0;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form {
+	padding: 1rem 0;
+	font-family: var(--secondary-font);
+	display: flex;
+	flex-direction: column;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form label {
+	display: none;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form input {
+	text-align: left;
+
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form input, .page-printed .main__wrapper .printed__txtcontent .printed--order p {
 	font-size: 0.85rem;
+		font-family: var(--secondary-font);
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form input {
+	margin: 0 0 1rem 0;
+	border-bottom: 1px solid var(--grey);
+  border-style: none none solid none;
+  background: #f4f4f4;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form input:focus {
+	outline-style: none;
+	background: white;
 }
 
 /* Break points for smaller Screens  */
