@@ -517,9 +517,10 @@ img {
 
 .page-printed .main__wrapper .printed__imgs {
 	display: flex;
-	justify-content: center;
+	/* justify-content: center; */
 	width: 100%;
 	margin-bottom: 1rem;
+	overflow-x: auto;
 }
 
 .page-printed .main__wrapper img {
@@ -528,6 +529,7 @@ img {
 	max-width: -moz-available;
 	max-width: -webkit-fill-available;
 	max-width: fill-available;
+	margin: 0 auto;
 }
 
 .page-printed .main__wrapper .printed__txtcontent {
