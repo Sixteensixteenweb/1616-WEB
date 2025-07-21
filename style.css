@@ -240,9 +240,9 @@ img {
 	text-align: center;
 	font-family: var(--secondary-font);
 	margin: 0 auto;
-	font-style: italic;
+	/* font-style: italic; */
 	line-height: 1.55ch;
-	text-transform: capitalize;
+	/* text-transform: capitalize; */
 }
 
 .exhibition__container,
@@ -517,10 +517,14 @@ img {
 
 .page-printed .main__wrapper .printed__imgs {
 	display: flex;
-	/* justify-content: center; */
 	width: 100%;
 	margin-bottom: 1rem;
 	overflow-x: auto;
+	justify-content: smart center;
+}
+
+.page-printed .main__wrapper .printed__imgs span {
+	margin: 0 auto;
 }
 
 .page-printed .main__wrapper img {
@@ -529,7 +533,7 @@ img {
 	max-width: -moz-available;
 	max-width: -webkit-fill-available;
 	max-width: fill-available;
-	margin: 0 auto;
+	margin: 0 1rem 0 0;
 }
 
 .page-printed .main__wrapper .printed__txtcontent {

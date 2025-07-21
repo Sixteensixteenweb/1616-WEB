@@ -32,95 +32,98 @@
 			</div>
 			<div>
 				<nav class="nav-dropdown">
-				<select
-					class="page-toggle"
-					data-target=".main__wrapper"
-					aria-label="Page selection"
-				>
-					<option selected value="exhibition" data-show=".exhibition">
-						Exhibition
-					</option>
-					<option value="archive" data-show=".archive">Archive</option>
-					<option value="printed" data-show=".printed">Printed</option>
-					<option value="artists" data-show=".artists">Artists</option>
-				</select>
-			</nav>
-			<span class="tab__container op1">
-				<button
-					onclick="exhibitionToggle(event, 'now-exhibition')"
-					id="defaultExhibition"
-					class="tab--item exhibitionTab"
-				>
-					Now
-				</button>
-				<button
-					onclick="exhibitionToggle(event, 'next-exhibition')"
-					class="tab--item exhibitionTab"
-				>
-					Next
-				</button>
-			</span>
+					<select
+						class="page-toggle"
+						data-target=".main__wrapper"
+						aria-label="Page selection"
+					>
+						<option selected value="exhibition" data-show=".exhibition">
+							Exhibition
+						</option>
+						<option value="archive" data-show=".archive">Archive</option>
+						<option value="printed" data-show=".printed">Printed</option>
+						<option value="artists" data-show=".artists">Artists</option>
+					</select>
+				</nav>
+				<span class="tab__container op1">
+					<button
+						onclick="exhibitionToggle(event, 'now-exhibition')"
+						id="defaultExhibition"
+						class="tab--item exhibitionTab"
+					>
+						Now
+					</button>
+					<button
+						onclick="exhibitionToggle(event, 'next-exhibition')"
+						class="tab--item exhibitionTab"
+					>
+						Next
+					</button>
+				</span>
 
-			<span class="tab__container op2">
-				<button
-					onclick="archiveToggle(event, 'all-archive')"
-					id="defaultArchive"
-					class="tab--item archiveTab"
-				>
-					All
-				</button>
-				<button
-					onclick="archiveToggle(event, '2025-archive')"
-					class="tab--item archiveTab"
-				>
-					2025
-				</button>
-			</span>
-			<span class="tab__container op3">
-				<button
-					onclick="printedToggle(event, 'all-printed')"
-					id="defaultPrinted"
-					class="tab--item printedTab"
-				>
-					All
-				</button>
-				<button
-					onclick="printedToggle(event, 'limited-printed')"
-					class="tab--item printedTab"
-				>
-					2025
-				</button>
-			</span>
-			<span class="tab__container op4">
-				<button
-					onclick="artistsToggle(event, 'all-artists')"
-					id="defaultArtists"
-					class="tab--item artistsTab"
-				>
-					All
-				</button>
-				<button
-					onclick="artistsToggle(event, 'AL-artists')"
-					class="tab--item artistsTab"
-				>
-					A-L
-				</button>
-				<button
-					onclick="artistsToggle(event, 'MZ-artists')"
-					class="tab--item artistsTab"
-				>
-					M-Z
-				</button>
-			</span>
-				
+				<span class="tab__container op2">
+					<button
+						onclick="archiveToggle(event, 'all-archive')"
+						id="defaultArchive"
+						class="tab--item archiveTab"
+					>
+						All
+					</button>
+					<button
+						onclick="archiveToggle(event, '2025-archive')"
+						class="tab--item archiveTab"
+					>
+						2025
+					</button>
+				</span>
+				<span class="tab__container op3">
+					<button
+						onclick="printedToggle(event, 'all-printed')"
+						id="defaultPrinted"
+						class="tab--item printedTab"
+					>
+						All
+					</button>
+					<button
+						onclick="printedToggle(event, 'limited-printed')"
+						class="tab--item printedTab"
+					>
+						2025
+					</button>
+				</span>
+				<span class="tab__container op4">
+					<button
+						onclick="artistsToggle(event, 'all-artists')"
+						id="defaultArtists"
+						class="tab--item artistsTab"
+					>
+						All
+					</button>
+					<button
+						onclick="artistsToggle(event, 'AL-artists')"
+						class="tab--item artistsTab"
+					>
+						A-L
+					</button>
+					<button
+						onclick="artistsToggle(event, 'MZ-artists')"
+						class="tab--item artistsTab"
+					>
+						M-Z
+					</button>
+				</span>
 			</div>
-			
 		</header>
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
 				<div id="now-exhibition" class="exhibition__container">
-					<a
+					<div class="exhibition--details">
+						<!-- <p>TBD &#8212;</p>
+						<p>&#8212; TBD</p> -->
+						<h2 class="placeholder">Nothing on display at the moment...</h2>
+					</div>
+					<!-- <a
 						href="exhibition-pages/memories-and-premonitions.htm"
 						title=""
 						target="_blank"
@@ -132,18 +135,18 @@
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
 						</div>
 						<div class="exhibition--img">
-								<img
-									src="images/exhibition/memories-and-premonitions/G44-Studio 1616-01.jpeg"
-								/>
-							</div>
-					</a>
+							<img
+								src="images/exhibition/memories-and-premonitions/G44-Studio 1616-01.jpeg"
+							/>
+						</div>
+					</a> -->
 				</div>
 
 				<div id="next-exhibition" class="exhibition__container">
 					<div class="exhibition--details">
-					<p>TBD &#8212;</p>
-						<p>&#8212; TBD</p>
-						<h2 class="placeholder">upcoming program released soon</h2>
+						<!-- <p>TBD &#8212;</p>
+						<p>&#8212; TBD</p> -->
+						<h2 class="placeholder">Upcoming program released soon...</h2>
 					</div>
 					<!-- <div class="exhibition--details">
 							<p>Nov 9 &#8212;</p>
@@ -156,9 +159,13 @@
 			<div class="page-section archive">
 				<div id="all-archive" class="archive__container">
 					<section>
-						<!-- <h2 class="placeholder">No previous shows yet</h2> -->
-						<a href="exhibition-pages/memories-and-premonitions.htm" title="" target="_blank" class="exhibition--details">
-							<p>Nov 9 &#8212; Apr 30</p>
+						<a
+							href="exhibition-pages/memories-and-premonitions.htm"
+							title=""
+							target="_blank"
+							class="exhibition--details"
+						>
+							<p>Nov 9 &#8212; Apr 30, 2025</p>
 							<h2>Memories And Premonitions</h2>
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
 						</a>
@@ -167,12 +174,16 @@
 
 				<div id="2025-archive" class="archive__container">
 					<section>
-						<h2 class="placeholder">No previous shows yet</h2>
-						<!-- <a href="" title="" target="_blank" class="exhibition--details">
+						<a
+							href="exhibition-pages/memories-and-premonitions.htm"
+							title=""
+							target="_blank"
+							class="exhibition--details"
+						>
+							<p>Nov 9 &#8212; Apr 30</p>
 							<h2>Memories And Premonitions</h2>
 							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
-							<p>Date1 &#8212; Date2</p>
-						</a> -->
+						</a>
 					</section>
 				</div>
 			</div>
@@ -180,55 +191,74 @@
 			<div class="page-section printed">
 				<div id="all-printed" class="printed__container">
 					<section>
-						<!-- <h2 class="placeholder">
-							No printed works available at the moment
-						</h2> -->
-						<a class="printed--item" href="printed-pages/print-01.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-1.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
+						<a
+							class="printed--item"
+							href="printed-pages/environmental-acoustics.htm"
+							target="_blank"
+							title="Environmental Acoustics Leslie L. Doelle 1972"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/environmental-acoustics/Environmental Acoustics Leslie L. Doelle 1972, 60,00.jpg"
+								title="Environmental Acoustics Leslie L. Doelle 1972"
+							/>
+							<p>Environmental Acoustics</p>
+							<p>Leslie L. Doelle</p>
+							<p>$60,00</p>
 						</a>
-						<a class="printed--item" href="printed-pages/print-02.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-2.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
+						<a
+							class="printed--item"
+							href="printed-pages/SIXTEENSIXTEEN-NET.htm"
+							target="_blank"
+							title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/sixteensixteen.net/SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025, 20,00 - interior 1.jpg"
+								title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+							/>
+							<p>SIXTEENSIXTEEN.NET</p>
+							<p>Gyimah Gariba, Khadijah Morley, Ashley Marshall</p>
+							<p>$20,00</p>
 						</a>
-						<a class="printed--item" href="printed-pages/print-03.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-3.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
-						</a>
-						<a class="printed--item" href="printed-pages/print-04.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-4.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
-						</a>
-						<a class="printed--item" href="printed-pages/print-05.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-5.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
+						<a
+							class="printed--item"
+							href="printed-pages/CINEMA.htm"
+							target="_blank"
+							title="Cinema, Timothy Yanick Hunter, 2024"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/cinema/Cinema, Timothy Yanick Hunter, 2024, 55,00.jpg"
+								title="Cinema, Timothy Yanick Hunter, 2024"
+							/>
+							<p>CINEMA</p>
+							<p>Timothy Yanick Hunter</p>
+							<p>$55,00</p>
 						</a>
 					</section>
 				</div>
 
 				<div id="limited-printed" class="printed__container">
 					<section>
-						<a class="printed--item" href="printed-pages/print-01.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-1.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
-						</a>
-						<a class="printed--item" href="printed-pages/print-02.htm" target="_blank" title="">
-							<img width="200px" height="200px" src="images/printed/print-2.png" title="printed-img" />
-							<p>title</p>
-							<p>artist name</p>
-							<p>$00,00</p>
+						<a
+							class="printed--item"
+							href="printed-pages/SIXTEENSIXTEEN-NET.htm"
+							target="_blank"
+							title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/sixteensixteen.net/SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025, 20,00 - interior 1.jpg"
+								title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+							/>
+							<p>SIXTEENSIXTEEN.NET</p>
+							<p>Gyimah Gariba, Khadijah Morley, Ashley Marshall</p>
+							<p>$20,00</p>
 						</a>
 					</section>
 				</div>
@@ -272,7 +302,10 @@
 		</main>
 
 		<footer class="about">
-			<p>1616 is a platform interested in interdisciplinary practice, peer-to-peer collaboration and material dissemination.</p>
+			<p>
+				1616 is a platform interested in interdisciplinary practice,
+				peer-to-peer collaboration and material dissemination.
+			</p>
 			<p>info@sixteensixteen.net</p>
 		</footer>
 
