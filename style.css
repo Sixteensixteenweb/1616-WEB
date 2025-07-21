@@ -604,16 +604,15 @@ img {
 	flex-direction: column;
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--order form label {
+.page-printed .main__wrapper .printed__txtcontent .printed--order form label:not(.local-pickup label) {
 	display: none;
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--order form input {
 	text-align: left;
-
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--order form input, .page-printed .main__wrapper .printed__txtcontent .printed--order p {
+.page-printed .main__wrapper .printed__txtcontent .printed--order form input, .page-printed .main__wrapper .printed__txtcontent .printed--order p, .page-printed .main__wrapper .local-pickup {
 	font-size: 0.85rem;
 		font-family: var(--secondary-font);
 }
@@ -628,6 +627,10 @@ img {
 .page-printed .main__wrapper .printed__txtcontent .printed--order form input:focus {
 	outline-style: none;
 	background: white;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form  span {
+	align-self: flex-start;
 }
 
 /* Break points for smaller Screens  */
