@@ -1,10 +1,10 @@
 var sixteensixteens = [
-	'1616-header/sixteen.svg',
-	'1616-header/sixteensixteeeeeen.svg',
-	'1616-header/sixteensixteeeeen.svg',
-	'1616-header/sixteensixteeeen.svg',
-	'1616-header/sixteensixteeen.svg',
-	'1616-header/sixteensixteen.svg',
+	'images/1616-logo/sixteen.svg',
+	'images/1616-logo/sixteensixteeeeeen.svg',
+	'images/1616-logo/sixteensixteeeeen.svg',
+	'images/1616-logo/sixteensixteeeen.svg',
+	'images/1616-logo/sixteensixteeen.svg',
+	'images/1616-logo/sixteensixteen.svg',
 ];
 
 // Dropdown Page Navigation (jQuery):
