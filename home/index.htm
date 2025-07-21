@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	
+
+		<title>--1616--</title>
+		<meta name="title" content="--1616--" />
+		<meta name="description" content="--1616--" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="" />
+		<meta property="og:title" content="--1616--" />
+		<meta property="og:description" content="--1616--" />
+		<meta property="og:image" content="" />
+
+		<link rel="icon" type="image/png" href="favicon.png" sizes="32x32">
+	</head>
+
+	<body>
+		<!-- THIS IS  THE LOGO HEADER FOR THE WEBSITE -->
+		<header class="header-menu">
+			<div class="header__container">
+				<img
+					id="sixteen"
+					src="1616-header/sixteen.svg"
+					title="sixteensixteen"
+					alt="sixteensixteen"
+					width="200"
+				/>
+				<p>1616 Dupont St Toronto ON M6P 3S7</p>
+			</div>
+			<div>
+				<nav class="nav-dropdown">
+					<select
+						class="page-toggle"
+						data-target=".main__wrapper"
+						aria-label="Page selection"
+					>
+						<option selected value="exhibition" data-show=".exhibition">
+							Exhibition
+						</option>
+						<option value="archive" data-show=".archive">Archive</option>
+						<option value="printed" data-show=".printed">Printed</option>
+						<option value="artists" data-show=".artists">Artists</option>
+					</select>
+				</nav>
+				<span class="tab__container op1">
+					<button
+						onclick="exhibitionToggle(event, 'now-exhibition')"
+						id="defaultExhibition"
+						class="tab--item exhibitionTab"
+					>
+						Now
+					</button>
+					<button
+						onclick="exhibitionToggle(event, 'next-exhibition')"
+						class="tab--item exhibitionTab"
+					>
+						Next
+					</button>
+				</span>
+
+				<span class="tab__container op2">
+					<button
+						onclick="archiveToggle(event, 'all-archive')"
+						id="defaultArchive"
+						class="tab--item archiveTab"
+					>
+						All
+					</button>
+					<button
+						onclick="archiveToggle(event, '2025-archive')"
+						class="tab--item archiveTab"
+					>
+						2025
+					</button>
+				</span>
+				<span class="tab__container op3">
+					<button
+						onclick="printedToggle(event, 'all-printed')"
+						id="defaultPrinted"
+						class="tab--item printedTab"
+					>
+						All
+					</button>
+					<button
+						onclick="printedToggle(event, 'limited-printed')"
+						class="tab--item printedTab"
+					>
+						2025
+					</button>
+				</span>
+				<span class="tab__container op4">
+					<button
+						onclick="artistsToggle(event, 'all-artists')"
+						id="defaultArtists"
+						class="tab--item artistsTab"
+					>
+						All
+					</button>
+					<button
+						onclick="artistsToggle(event, 'AL-artists')"
+						class="tab--item artistsTab"
+					>
+						A-L
+					</button>
+					<button
+						onclick="artistsToggle(event, 'MZ-artists')"
+						class="tab--item artistsTab"
+					>
+						M-Z
+					</button>
+				</span>
+			</div>
+		</header>
+
+		<main class="main__wrapper">
+			<div class="page-section exhibition">
+				<div id="now-exhibition" class="exhibition__container">
+					<div class="exhibition--details">
+						<!-- <p>TBD &#8212;</p>
+						<p>&#8212; TBD</p> -->
+						<h2 class="placeholder">Nothing on display at the moment...</h2>
+					</div>
+					<!-- <a
+						href="exhibition-pages/memories-and-premonitions.htm"
+						title=""
+						target="_blank"
+					>
+						<div class="exhibition--details">
+							<p>Nov 9 &#8212;</p>
+							<p>&#8212; Apr 30</p>
+							<h2>Memories And Premonitions</h2>
+							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
+						</div>
+						<div class="exhibition--img">
+							<img
+								src="images/exhibition/memories-and-premonitions/G44-Studio 1616-01.jpeg"
+							/>
+						</div>
+					</a> -->
+				</div>
+
+				<div id="next-exhibition" class="exhibition__container">
+					<div class="exhibition--details">
+						<!-- <p>TBD &#8212;</p>
+						<p>&#8212; TBD</p> -->
+						<h2 class="placeholder">Upcoming program released soon...</h2>
+					</div>
+					<!-- <div class="exhibition--details">
+							<p>Nov 9 &#8212;</p>
+							<p>&#8212; Apr 30</p>
+							<h2>Placeholder Program Title</h2>
+							<p>Artist Names, Artist Names</p>
+						</div> -->
+				</div>
+			</div>
+			<div class="page-section archive">
+				<div id="all-archive" class="archive__container">
+					<section>
+						<a
+							href="exhibition-pages/memories-and-premonitions.htm"
+							title=""
+							target="_blank"
+							class="exhibition--details"
+						>
+							<p>Nov 9 &#8212; Apr 30, 2025</p>
+							<h2>Memories And Premonitions</h2>
+							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
+						</a>
+					</section>
+				</div>
+
+				<div id="2025-archive" class="archive__container">
+					<section>
+						<a
+							href="exhibition-pages/memories-and-premonitions.htm"
+							title=""
+							target="_blank"
+							class="exhibition--details"
+						>
+							<p>Nov 9 &#8212; Apr 30</p>
+							<h2>Memories And Premonitions</h2>
+							<p>Julianna A.S., Delali Cofie and Kourtney Jackson</p>
+						</a>
+					</section>
+				</div>
+			</div>
+
+			<div class="page-section printed">
+				<div id="all-printed" class="printed__container">
+					<section>
+						<a
+							class="printed--item"
+							href="printed-pages/environmental-acoustics.htm"
+							target="_blank"
+							title="Environmental Acoustics Leslie L. Doelle 1972"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/environmental-acoustics/Environmental Acoustics Leslie L. Doelle 1972, 60,00.jpg"
+								title="Environmental Acoustics Leslie L. Doelle 1972"
+							/>
+							<p>Environmental Acoustics</p>
+							<p>Leslie L. Doelle</p>
+							<p>$60,00</p>
+						</a>
+						<a
+							class="printed--item"
+							href="printed-pages/SIXTEENSIXTEEN-NET.htm"
+							target="_blank"
+							title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/sixteensixteen.net/SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025, 20,00 - interior 1.jpg"
+								title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+							/>
+							<p>SIXTEENSIXTEEN.NET</p>
+							<p>Gyimah Gariba, Khadijah Morley, Ashley Marshall</p>
+							<p>$20,00</p>
+						</a>
+						<a
+							class="printed--item"
+							href="printed-pages/CINEMA.htm"
+							target="_blank"
+							title="Cinema, Timothy Yanick Hunter, 2024"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/cinema/Cinema, Timothy Yanick Hunter, 2024, 55,00.jpg"
+								title="Cinema, Timothy Yanick Hunter, 2024"
+							/>
+							<p>CINEMA</p>
+							<p>Timothy Yanick Hunter</p>
+							<p>$55,00</p>
+						</a>
+					</section>
+				</div>
+
+				<div id="limited-printed" class="printed__container">
+					<section>
+						<a
+							class="printed--item"
+							href="printed-pages/SIXTEENSIXTEEN-NET.htm"
+							target="_blank"
+							title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+						>
+							<img
+								width="200px"
+								height="200px"
+								src="images/printed/sixteensixteen.net/SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025, 20,00 - interior 1.jpg"
+								title="SIXTEENSIXTEEN.NET, Gyimah Gari ba, Khadijah Morley, Ashley Marshall, 2025"
+							/>
+							<p>SIXTEENSIXTEEN.NET</p>
+							<p>Gyimah Gariba, Khadijah Morley, Ashley Marshall</p>
+							<p>$20,00</p>
+						</a>
+					</section>
+				</div>
+			</div>
+
+			<div class="page-section artists">
+				<div id="all-artists" class="artists__container">
+					<a
+						href="https://www.delalicofie.com/"
+						title="www.delalicofie.com"
+						target="_blank"
+						>Delali Cofie</a
+					>
+					<a
+						href="https://mayworks.ca/artist/julianna-a-s/"
+						title="mayworks festival"
+						target="_blank"
+						>Julianna A.S.</a
+					>
+					<a href="" title="" target="_blank">Kourtney Jackson</a>
+				</div>
+				<div id="AL-artists" class="artists__container">
+					<a
+						href="https://www.delalicofie.com/"
+						title="www.delalicofie.com"
+						target="_blank"
+						>Delali Cofie</a
+					>
+					<a
+						href="https://mayworks.ca/artist/julianna-a-s/"
+						title="mayworks festival"
+						target="_blank"
+						>Julianna A.S.</a
+					>
+					<a href="" title="" target="_blank">Kourtney Jackson</a>
+				</div>
+				<div id="MZ-artists" class="artists__container">
+					<a href="" title="" target="_blank"></a>
+				</div>
+			</div>
+		</main>
+
+		<footer class="about">
+			<p>
+				1616 is a platform interested in interdisciplinary practice,
+				peer-to-peer collaboration and material dissemination.
+			</p>
+			<p>info@sixteensixteen.net</p>
+		</footer>
+
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="js/header.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
