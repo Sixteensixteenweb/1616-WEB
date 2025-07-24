@@ -424,12 +424,11 @@ img {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	width: inherit;
 }
 
-.page-exhibition nav a:hover p,
-.page-printed nav a:hover p {
-	/* color: var(--primary-color); */
-}
+.page-printed .main__wrapper img {width: 100%;}
+
 
 .page-exhibition header nav span,
 .page-printed header nav span {
@@ -590,6 +589,7 @@ img {
 	margin: 0 auto 1rem auto;
 	cursor: pointer;
 	border: 1px outset var(--grey);
+	-webkit-border: 1px outset var(--grey);
 	color: var(--text-color);
 }
 
