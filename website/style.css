@@ -549,8 +549,6 @@ img {
 	margin: 0 1rem 0 0;
 }
 
-.page-printed .main__wrapper img {width: 100%;}
-
 .page-printed .main__wrapper .printed__txtcontent {
 	display: flex;
 	flex-direction: column;
