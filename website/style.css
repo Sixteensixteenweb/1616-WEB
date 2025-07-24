@@ -427,7 +427,7 @@ img {
 	width: inherit;
 }
 
-.page-printed .main__wrapper img {width: 100%;}
+
 
 
 .page-exhibition header nav span,
@@ -529,6 +529,7 @@ img {
 	margin-bottom: 1rem;
 	overflow-x: auto;
 	justify-content: smart center;
+	-webkit-justify-content:center;
 }
 
 .page-printed .main__wrapper .printed__imgs span {
@@ -547,6 +548,8 @@ img {
 	max-width: fill-available;
 	margin: 0 1rem 0 0;
 }
+
+.page-printed .main__wrapper img {width: 100%;}
 
 .page-printed .main__wrapper .printed__txtcontent {
 	display: flex;
