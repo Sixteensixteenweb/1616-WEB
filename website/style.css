@@ -427,9 +427,6 @@ img {
 	width: inherit;
 }
 
-
-
-
 .page-exhibition header nav span,
 .page-printed header nav span {
 	border-bottom: 1px solid var(--text-color);
@@ -538,6 +535,8 @@ img {
 	flex-direction: row;
 	flex-wrap: nowrap;
 	overflow-x: auto;
+	width: 100%;
+	justify-content: center;
 }
 
 .page-printed .main__wrapper img {
@@ -694,10 +693,9 @@ img {
 	}
 }
 
-
 @media (max-width: 560px) {
 	.page-printed .main__wrapper img {
 		width: auto;
-    height: 40vh;
+		height: 40vh;
 	}
 }
