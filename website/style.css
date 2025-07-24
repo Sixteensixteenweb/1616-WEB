@@ -529,7 +529,7 @@ img {
 	margin-bottom: 1rem;
 	overflow-x: auto;
 	justify-content: smart center;
-	-webkit-justify-content:center;
+	-webkit-justify-content: smart center;
 }
 
 .page-printed .main__wrapper .printed__imgs span {
