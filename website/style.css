@@ -143,6 +143,12 @@ header h3 {
 	outline: none;
 }
 
+.nav-dropdown select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border-radius: 0;
+}
+
 .nav-dropdown select::-ms-expand {
 	display: none;
 }
@@ -570,13 +576,14 @@ img {
 
 .page-printed .main__wrapper .printed__txtcontent button {
 	background: none;
-	text-underline-offset: 2px;
 	font-family: var(--primary-font);
+	font-size: 0.85rem;
 	padding: 0.25rem 2rem;
 	width: fit-content;
 	margin: 0 auto 1rem auto;
 	cursor: pointer;
-	border: 1px outset;
+	border: 1px outset var(--grey);
+	color: var(--text-color);
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
@@ -643,11 +650,7 @@ img {
 		min-width: 95%;
 		margin: 0 auto;
 	}
-	.page-printed .main__wrapper img {
-		width: 50%;
-		min-width: 300px;
-		height: auto;
-	}
+
 }
 
 @media (max-width: 780px) {
