@@ -693,3 +693,11 @@ img {
 		font-size: 1.5rem;
 	}
 }
+
+
+@media (max-width: 560px) {
+	.page-printed .main__wrapper img {
+		width: auto;
+    height: 40vh;
+	}
+}
