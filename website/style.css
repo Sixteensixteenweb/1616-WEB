@@ -618,6 +618,20 @@ img {
 	flex-direction: column;
 }
 
+.page-printed .main__wrapper .printed__txtcontent .printed--order form #printed-item__hidden {
+display: none;
+}
+.page-printed .main__wrapper .printed__txtcontent .printed--order form div {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form div span {
+	text-align: left;
+}
+
 .page-printed
 	.main__wrapper
 	.printed__txtcontent

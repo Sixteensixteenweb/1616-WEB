@@ -16,7 +16,7 @@
 		<meta property="og:description" content="--1616--" />
 		<meta property="og:image" content="" />
 
-		<link rel="icon" type="image/png" href="/favicon.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
 	</head>
 
 	<body class="page-printed">
@@ -80,10 +80,15 @@
 
 				<div class="printed--description">
 					<p>
-						<em class="para--title">CINEMA </em> is a collection of photos, scans and screenshots by Timothy Yanick
-Hunter. The booklet develops from the artists travels between Toronto,
-Montreal, Jamaica and Dakar. The booklet is a part of Hunter’s ongoing
-series True And Functional (<a href="https://www.trueandfunctional.com/" title="www.trueandfunctional.com">www.trueandfunctional.com</a>)
+						<em class="para--title">CINEMA </em> is a collection of photos,
+						scans and screenshots by Timothy Yanick Hunter. The booklet develops
+						from the artists travels between Toronto, Montreal, Jamaica and
+						Dakar. The booklet is a part of Hunter’s ongoing series True And
+						Functional (<a
+							href="https://www.trueandfunctional.com/"
+							title="www.trueandfunctional.com"
+							>www.trueandfunctional.com</a
+						>)
 					</p>
 				</div>
 
@@ -91,6 +96,8 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 					<details>
 						<summary id="btn--order">Place Order</summary>
 						<form id="order-printed">
+							<label for="name">Cinema</label>
+							<input id="printed-item__hidden" placeholder="Cinema" name="item" type="text" required />
 							<label for="name">Name</label>
 							<input placeholder="Name" name="name" type="text" required />
 							<label for="email">Email</label>
@@ -141,24 +148,27 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 
 							<label for="notes">Additional Notes (optional)</label>
 							<input placeholder="Additional Notes" name="notes" type="text" />
-							<span class="local-pickup">
-								<input
-									type="checkbox"
-									id="local-pickup"
-									name="local pickup"
-									value="Local Pickup"
-								/>
-								<label for="local-pickup"> Request local pickup</label>
-							</span>
-							<span class="local-pickup">
-								<input
-									type="checkbox"
-									id="newsletter"
-									name="newsletter"
-									checked
-								/>
-								<label for="local-pickup"> I would like to receive email updates</label>
-							</span>
+							<div>
+								<span class="local-pickup">
+									<input
+										type="checkbox"
+										id="local-pickup"
+										name="local pickup"
+										value="Local Pickup"
+									/>
+									<label for="local-pickup"> Request local pickup</label>
+								</span>
+								<span class="local-pickup">
+									<input
+										type="checkbox"
+										id="newsletter"
+										name="newsletter"
+										checked
+									/>
+									<label for="local-pickup">Add me to 1616's email list</label>
+								</span>
+							</div>
+
 							<button type="submit">Order</button>
 						</form>
 					</details>
@@ -169,7 +179,12 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 							details for making payment. We are only accepting e-transfers at
 							this moment.
 						</p>
-						<p>All orders are shipped with tracking and insurance and will be processed within 5-7 business days after receiving payment. We are not responsible for lost, stolen, or damaged shipments caused by Canada Post. Buyer is responsible for all duties and taxes that may be applicable upon receipt.
+						<p>
+							All orders are shipped with tracking and insurance and will be
+							processed within 5-7 business days after receiving payment. We are
+							not responsible for lost, stolen, or damaged shipments caused by
+							Canada Post. Buyer is responsible for all duties and taxes that
+							may be applicable upon receipt.
 						</p>
 						<p>
 							Canada - Free shipping on orders over $150 CAD, $15 flat rate for
@@ -195,6 +210,6 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 				</a>
 			</nav>
 		</footer>
-	<script src="../js/formeasy.js"></script>
+		<script src="../js/formeasy.js"></script>
 	</body>
 </html>
