@@ -1,5 +1,5 @@
 const url =
-	'https://script.google.com/macros/s/AKfycbzmh70TAyaXzKtX_B-tBLWXeeSZ4v4krT9wdK3uyuQth9uc-vRqGcp9y9B-TMXCwLpq/exec';
+	'https://script.google.com/macros/s/AKfycbzuHXugcOy0LdMMHhWOWFPSBvqKexPkbig2IxwHXtBLD5nlky4YjVm0CPRJSRRGtt5B/exec';
 
 document
 	.getElementById('order-printed')
