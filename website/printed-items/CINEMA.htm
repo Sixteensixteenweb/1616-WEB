@@ -90,7 +90,7 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 				<div class="printed--order">
 					<details>
 						<summary id="btn--order">Place Order</summary>
-						<form action="https://fabform.io/f/8MRdkAc" method="post">
+						<form id="order-printed">
 							<label for="name">Name</label>
 							<input placeholder="Name" name="name" type="text" required />
 							<label for="email">Email</label>
@@ -106,7 +106,7 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 							<label for="unit">Apartment, suite, etc. (optional)</label>
 							<input
 								placeholder="Apartment, suite, etc. (optional)"
-								name="unit"
+								name="apt"
 								type="text"
 							/>
 
@@ -124,7 +124,7 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 							<label for="zip">Postal Code</label>
 							<input
 								placeholder="Postal Code"
-								name="zip"
+								name="postal code"
 								type="text"
 								required
 							/>
@@ -145,10 +145,19 @@ series True And Functional (<a href="https://www.trueandfunctional.com/" title="
 								<input
 									type="checkbox"
 									id="local-pickup"
-									name="Local Pickup"
+									name="local pickup"
 									value="Local Pickup"
 								/>
 								<label for="local-pickup"> Request local pickup</label>
+							</span>
+							<span class="local-pickup">
+								<input
+									type="checkbox"
+									id="newsletter"
+									name="newsletter"
+									checked
+								/>
+								<label for="local-pickup"> I would like to receive email updates</label>
 							</span>
 							<button type="submit">Order</button>
 						</form>
