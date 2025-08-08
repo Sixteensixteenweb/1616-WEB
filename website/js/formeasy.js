@@ -8,7 +8,7 @@ document
 
 		const formData = new FormData(this);
     const data = Object.fromEntries(formData);
-    const go = document.getElementById("go");
+    let go = document.getElementById("go");
 
     go.disabled = true;
 
