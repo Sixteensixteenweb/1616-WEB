@@ -7,10 +7,7 @@ document
 		event.preventDefault();
 
 		const formData = new FormData(this);
-    const data = Object.fromEntries(formData);
-    let go = document.getElementById("go");
-
-    go.disabled = true;
+		const data = Object.fromEntries(formData);
 
 		fetch(url, {
 			method: 'POST',
@@ -23,8 +20,6 @@ document
 			.then((data) => {
 				console.log('Successful', data);
 				this.reset();
-      })
-       .then(() => go.disabled = false )
-      .catch((err) => console.log('err', err));
-   
+			})
+			.catch((err) => console.log('err', err));
 	});
