@@ -23,7 +23,8 @@ document
 			.then((data) => {
 				console.log('Successful', data);
 				this.reset();
-			})
+      })
+       .then(() => go.disabled = false )
       .catch((err) => console.log('err', err));
-    .finally(() => go.disabled = false );
+   
 	});
