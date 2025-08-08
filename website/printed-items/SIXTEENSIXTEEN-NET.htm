@@ -81,7 +81,18 @@
 				<div class="printed--order">
 					<details>
 						<summary id="btn--order">Place Order</summary>
-						<form action="https://fabform.io/f/m-OSXdH" method="post">
+						<form id="order-printed">
+							<span class="printed-item__hidden">
+								<input
+									type="checkbox"
+									id="item-name"
+									name="item"
+									value="sixteensixteen.net"
+									checked
+								/>
+								<label for="item">cinema</label>
+							</span>
+
 							<label for="name">Name</label>
 							<input placeholder="Name" name="name" type="text" required />
 							<label for="email">Email</label>
@@ -97,7 +108,7 @@
 							<label for="unit">Apartment, suite, etc. (optional)</label>
 							<input
 								placeholder="Apartment, suite, etc. (optional)"
-								name="unit"
+								name="apt"
 								type="text"
 							/>
 
@@ -115,7 +126,7 @@
 							<label for="zip">Postal Code</label>
 							<input
 								placeholder="Postal Code"
-								name="zip"
+								name="postal code"
 								type="text"
 								required
 							/>
@@ -126,22 +137,38 @@
 								name="quantity"
 								type="number"
 								min="1"
-								max="100"
+								max="55"
 								required
 							/>
 
 							<label for="notes">Additional Notes (optional)</label>
 							<input placeholder="Additional Notes" name="notes" type="text" />
-							<span class="local-pickup">
-								<input
-									type="checkbox"
-									id="local-pickup"
-									name="Local Pickup"
-									value="Local Pickup"
-								/>
-								<label for="local-pickup"> Request local pickup</label>
-							</span>
+							<div>
+								<span class="local-pickup">
+									<input
+										type="checkbox"
+										id="local-pickup"
+										name="local pickup"
+										value="Yes"
+									/>
+									<label for="local-pickup">Request local pickup</label>
+								</span>
+								<span class="local-pickup">
+									<input
+										type="checkbox"
+										id="newsletter"
+										name="newsletter"
+										value="Yes"
+										checked
+									/>
+									<label for="newsletter">Add me to 1616's email list</label>
+								</span>
+							</div>
+
 							<button type="submit">Order</button>
+							<pre>
+The form will take a moment to send and reset, please be patient to avoid sending multiple orders.</pre
+							>
 						</form>
 					</details>
 					<details>
