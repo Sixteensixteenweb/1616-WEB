@@ -593,6 +593,17 @@ img {
 	color: var(--text-color);
 }
 
+.page-printed .main__wrapper .printed__txtcontent button:hover {
+	background: #f4f4f4;
+}
+
+
+.page-printed .main__wrapper .printed__txtcontent button:active {
+	background: #f4f4f4;
+	color: var(--primary-color);
+}
+
+
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
 	font-size: 0.85rem;
 }
