@@ -597,12 +597,10 @@ img {
 	background: #f4f4f4;
 }
 
-
 .page-printed .main__wrapper .printed__txtcontent button:active {
 	background: #f4f4f4;
 	color: var(--primary-color);
 }
-
 
 .page-printed .main__wrapper .printed__txtcontent .printed--details {
 	font-size: 0.85rem;
@@ -629,8 +627,13 @@ img {
 	flex-direction: column;
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--order form #printed-item__hidden {
-display: none;
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--order
+	form
+	#printed-item__hidden {
+	display: none;
 }
 .page-printed .main__wrapper .printed__txtcontent .printed--order form div {
 	display: flex;
@@ -639,8 +642,20 @@ display: none;
 	justify-content: space-between;
 }
 
-.page-printed .main__wrapper .printed__txtcontent .printed--order form div span {
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--order
+	form
+	div
+	span {
 	text-align: left;
+}
+
+.page-printed .main__wrapper .printed__txtcontent .printed--order form pre {
+	font-family: var(--primary-font);
+	color: var(--grey);
+	font-size: 0.65rem;
 }
 
 .page-printed
