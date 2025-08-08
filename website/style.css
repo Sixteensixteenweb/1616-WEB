@@ -621,7 +621,7 @@ img {
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--order form {
-	padding: 1rem 0;
+	padding: 0 0 1rem 0;
 	font-family: var(--secondary-font);
 	display: flex;
 	flex-direction: column;
@@ -631,10 +631,17 @@ img {
 	.main__wrapper
 	.printed__txtcontent
 	.printed--order
-	form
-	#printed-item__hidden {
-	display: none;
+	form .printed-item__hidden {
+	opacity: 0;
 }
+
+.page-printed
+	.main__wrapper
+	.printed__txtcontent
+	.printed--order
+	form .printed-item__hidden input {
+		margin: 0;
+	}
 .page-printed .main__wrapper .printed__txtcontent .printed--order form div {
 	display: flex;
 	flex-direction: row;
@@ -669,6 +676,10 @@ img {
 
 .page-printed .main__wrapper .printed__txtcontent .printed--order form input {
 	text-align: left;
+		margin: 0 0 1rem 0;
+	border-bottom: 1px solid var(--grey);
+	border-style: none none solid none;
+	background: #f4f4f4;
 }
 
 .page-printed .main__wrapper .printed__txtcontent .printed--order form input,
@@ -676,13 +687,6 @@ img {
 .page-printed .main__wrapper .local-pickup {
 	font-size: 0.85rem;
 	font-family: var(--secondary-font);
-}
-
-.page-printed .main__wrapper .printed__txtcontent .printed--order form input {
-	margin: 0 0 1rem 0;
-	border-bottom: 1px solid var(--grey);
-	border-style: none none solid none;
-	background: #f4f4f4;
 }
 
 .page-printed

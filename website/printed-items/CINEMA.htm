@@ -86,7 +86,21 @@
 					<details>
 						<summary id="btn--order">Place Order</summary>
 						<form id="order-printed">
-							<p name="item" id="printed-item__hidden" value="cinema">cinema</p>
+							<span class="printed-item__hidden">
+								<input
+									type="checkbox"
+									id="item-name"
+									name="item"
+									value="cinema" checked
+								/>
+								<label for="item">cinema</label>
+							</span>
+
+							<label name="item" id="printed-item__hidden" value="cinema"
+								>Name</label
+							>
+							<input placeholder="Name" name="name" type="text" required />
+
 							<label for="name">Name</label>
 							<input placeholder="Name" name="name" type="text" required />
 							<label for="email">Email</label>
