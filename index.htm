@@ -19,7 +19,8 @@
 	</head>
 
 	<body>
-		<!-- THIS IS  THE LOGO HEADER FOR THE WEBSITE -->
+		<!-- *********** -->
+		<!-- LOGO HEADER -->
 		<header class="header-menu">
 			<div class="header__container">
 				<img
@@ -31,6 +32,8 @@
 				/>
 				<p>1616 Dupont St Toronto ON M6P 3S7</p>
 			</div>
+			<!-- ******************* -->
+			<!-- MAIN DROP DOWN MEUN -->
 			<div>
 				<nav class="nav-dropdown">
 					<select
@@ -42,10 +45,15 @@
 							Exhibition
 						</option>
 						<option value="archive" data-show=".archive">Archive</option>
-						<option selected value="printed" data-show=".printed">Printed</option>
+						<option selected value="printed" data-show=".printed">
+							Printed
+						</option>
 						<option value="artists" data-show=".artists">Artists</option>
 					</select>
 				</nav>
+
+				<!-- *********************** -->
+				<!-- TAB OPTIONS: EXHIBITION -->
 				<span class="tab__container op1">
 					<button
 						onclick="exhibitionToggle(event, 'now-exhibition')"
@@ -61,7 +69,8 @@
 						Next
 					</button>
 				</span>
-
+				<!-- ******************** -->
+				<!-- TAB OPTIONS: ARCHIVE -->
 				<span class="tab__container op2">
 					<button
 						onclick="archiveToggle(event, 'all-archive')"
@@ -77,6 +86,8 @@
 						2025
 					</button>
 				</span>
+				<!-- ******************** -->
+				<!-- TAB OPTIONS: PRINTED -->
 				<span class="tab__container op3">
 					<button
 						onclick="printedToggle(event, 'all-printed')"
@@ -92,6 +103,8 @@
 						2025
 					</button>
 				</span>
+				<!-- ******************** -->
+				<!-- TAB OPTIONS: ARTISTS -->
 				<span class="tab__container op4">
 					<button
 						onclick="artistsToggle(event, 'all-artists')"
@@ -118,6 +131,8 @@
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
+				<!-- **************** -->
+				<!-- EXHIBITION : NOW -->
 				<div id="now-exhibition" class="exhibition__container">
 					<div class="exhibition--details">
 						<h2 class="placeholder">Nothing on display at the moment...</h2>
@@ -140,7 +155,8 @@
 						</div>
 					</a> -->
 				</div>
-
+				<!-- ***************** -->
+				<!-- EXHIBITION : NEXT -->
 				<div id="next-exhibition" class="exhibition__container">
 					<!-- <div class="exhibition--details">
 						<h2 class="placeholder">Upcoming program released soon...</h2>
@@ -161,7 +177,10 @@
 					</article>
 				</div>
 			</div>
+
 			<div class="page-section archive">
+				<!-- ************* -->
+				<!-- ARCHIVE : ALL -->
 				<div id="all-archive" class="archive__container">
 					<section>
 						<a
@@ -176,7 +195,8 @@
 						</a>
 					</section>
 				</div>
-
+				<!-- ************** -->
+				<!-- ARCHIVE : 2025 -->
 				<div id="2025-archive" class="archive__container">
 					<section>
 						<a
@@ -194,6 +214,8 @@
 			</div>
 
 			<div class="page-section printed">
+				<!-- ************** -->
+				<!-- PRINTED : ALL -->
 				<div id="all-printed" class="printed__container">
 					<section>
 						<a
@@ -247,6 +269,8 @@
 					</section>
 				</div>
 
+				<!-- ************** -->
+				<!-- PRINTED : 2025 -->
 				<div id="limited-printed" class="printed__container">
 					<section>
 						<a
@@ -270,6 +294,8 @@
 			</div>
 
 			<div class="page-section artists">
+				<!-- ************* -->
+				<!-- ARTISTS : ALL -->
 				<div id="all-artists" class="artists__container">
 					<a
 						href="https://www.delalicofie.com/"
@@ -285,6 +311,9 @@
 					>
 					<a href="" title="" target="_blank">Kourtney Jackson</a>
 				</div>
+
+				<!-- **************** -->
+				<!-- ARTISTS : A TO L -->
 				<div id="AL-artists" class="artists__container">
 					<a
 						href="https://www.delalicofie.com/"
@@ -300,12 +329,17 @@
 					>
 					<a href="" title="" target="_blank">Kourtney Jackson</a>
 				</div>
+
+				<!-- **************** -->
+				<!-- ARTISTS : M TO Z -->
 				<div id="MZ-artists" class="artists__container">
 					<a href="" title="" target="_blank"></a>
 				</div>
 			</div>
 		</main>
 
+		<!-- ****** -->
+		<!-- FOOTER -->
 		<footer class="about">
 			<p>
 				1616 is a platform interested in interdisciplinary practice,
@@ -314,6 +348,8 @@
 			<p>info@sixteensixteen.net</p>
 		</footer>
 
+		<!-- ******************************** -->
+		<!-- DO NOT EDIT, CONNECTS TO JS FILE -->
 		<script
 			src="https://code.jquery.com/jquery-3.7.1.min.js"
 			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
